@@ -1,0 +1,2643 @@
+
+/* //////////////////////////////////---LOGIN Page----\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+.login-background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(45deg, #76ffcb , #1d8fcc);
+    width: 100vw;
+    height: 100vh;
+    font-family: roboto;
+}
+.login-wrapper{
+    display: flex;
+    height: 70%;
+    width: 50%;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.452);
+    border-radius: 20px;
+    box-shadow: hsla(0, 0%, 0%, 0.219) 7px 2px 15px;
+}
+.login-wrapper header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    user-select: none;
+    width: 50%;
+    height: 100%;
+    font-size: 90px;
+    margin-top: 0px;
+    text-align: center;
+    color: #002438;
+    font-weight: 1000;
+    line-height: 45px;
+    
+}
+.login-wrapper header span{
+    position: relative;
+    font-size: 45px;
+    font-weight: 400;
+    top: 20px;
+}
+.login-wrapper .login-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    gap: 25px;
+}
+.login-wrapper form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+}
+.login-wrapper form input{
+    /* height: 100%; */
+    width: 100%;
+   
+}
+.login-wrapper form label{
+    /* text-align: left; */
+    color: #002438;
+    margin: 0;
+}
+.login-wrapper .login-details h2{
+    font-size: 40px;
+}
+#loginEmail{
+    height: 40px;
+    width: 80%;
+    align-self: center;
+    border-radius: 50px;
+    padding-left: 20px;
+    border-color: transparent;
+}
+#loginPassword{
+    height: 40px;
+    width: 80%;
+    align-self: center;
+    border-radius: 50px;
+    padding-left: 20px;
+    border-color: transparent;
+}
+#loginEmail:focus, #loginPassword:focus{
+    outline: none;
+    border-color: rgb(255, 255, 255);
+    bleed: 10;
+}
+.login-details form .submit-btn{
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 20px;
+    background-color: #002438;
+    background-position: center;
+    color: white;
+    outline: none;
+    align-self: center;
+    width: 50%;
+    height: 45px;
+    border-width: 0px;
+    border-radius: 50px;
+    /* border-color: #002438; */
+    transition: background 0.6s;
+}
+.login-details form .submit-btn:hover{
+    background-position: center;
+    background-size: 20000%;
+    background-color: #00a393;
+    outline: none;
+    border: none;
+    /* background-image: radial-gradient(circle, transparent 1%, #00a393 1%); */
+}
+
+/* Login Tablet and mobile responsive resolutions */
+@media only screen and (max-width:1025px){
+    .login-wrapper{
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+        width: 60%;
+        
+        background-color: rgba(255, 255, 255, 0.452);
+        border-radius: 20px;
+        box-shadow: hsla(0, 0%, 0%, 0.219) 7px 2px 15px;
+    }
+    .login-wrapper header{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        user-select: none;
+        width: 100%;
+        height: 30%;
+        font-size: 70px;
+        /* margin-top: -50px; */
+        text-align: center;
+        color: #002438;
+        font-weight: 1000;
+        line-height: 45px;
+        
+    }
+    .login-wrapper header span{
+        position: relative;
+        font-size: 35px;
+        font-weight: 400;
+        top: 10px;
+    }
+    .login-wrapper .login-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 70%;
+        /* gap: 30px; */
+        position: relative;
+        transform: translateY(-70px);
+        /* padding-bottom: 60px; */
+    }
+    .login-wrapper .login-details h2{
+        font-size: 30px;
+        margin-top: 50px;
+    }
+    .login-wrapper form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+    .login-wrapper form span{
+        margin-top: 30px;
+    }
+    #loginEmail, #loginPassword{
+        width: 80%;
+        align-self: center;
+    }
+}
+/* for laptop screen separate adjustment */
+/* @media only screen and (min-width: 1148px)*/
+@media only screen and (min-width : 1224px){ 
+    .login-wrapper{
+        width: 60%;
+    }
+    .login-wrapper header{
+        font-size: 70px;
+    }
+    .login-wrapper header span{
+        font-size: 35px;
+        top: 3px;
+    }
+    
+    .login-wrapper .login-details h2{
+        font-size: 30px;
+        padding-top: 20px
+    }
+    .login-wrapper .login-details form{
+       width: 95%;
+       padding-bottom: 30px;
+       gap: 15px;
+    }
+    .login-wrapper .login-details form #loginEmail,
+    .login-wrapper .login-details form #loginPassword,
+    .login-wrapper .login-details form .submit-btn{
+        height: 35px;
+    }
+    .login-wrapper .login-details form .submit-btn{
+        width: 150px;
+        margin-top: 15px;
+        font-size: 15px;
+    }
+    .login-wrapper .login-details form span{
+        margin-top: 20px;
+    }
+}
+@media only screen and (max-width:425px){
+    .login-wrapper{
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+        width: 90%;
+        
+        background-color: rgba(255, 255, 255, 0.452);
+        border-radius: 20px;
+        box-shadow: hsla(0, 0%, 0%, 0.219) 7px 2px 15px;
+    }
+    .login-wrapper header{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        user-select: none;
+        width: 100%;
+        height: 30%;
+        font-size: 70px;
+        /* margin-top: -50px; */
+        text-align: center;
+        color: #002438;
+        font-weight: 1000;
+        line-height: 45px;
+        
+    }
+    .login-wrapper header span{
+        position: relative;
+        font-size: 35px;
+        font-weight: 400;
+        top: 10px;
+    }
+    .login-wrapper .login-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 70%;
+        gap: 30px;
+        position: relative;
+        transform: translateY(-70px);
+        /* padding-bottom: 60px; */
+    }
+    .login-wrapper .login-details h2{
+        font-size: 25px;
+        margin-top: 50px;
+    }
+    .login-wrapper form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 80%;
+    }
+    .login-wrapper form span{
+        margin-top: 30px;
+    }
+    #loginEmail, #loginPassword{
+        width: 100%;
+        align-self: center;
+    }
+}
+
+
+
+/* //////////////////////////////////---Forgot Password Page----\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+.forgot-pass{
+    gap: 40px;
+}
+.forgot-pass h2{
+    align-self: center;
+}
+.forgot-pass .forgot-description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.424);
+    height: 110px;
+    width: 80%;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+.forgot-pass form{
+    gap: 20px;
+}
+
+
+.forgot-pass form #forgotEmail{
+    height: 40px;
+    width: 80%;
+    align-self: center;
+    outline: none;
+    border-radius: 50px;
+    padding-left: 20px;
+    border-color: transparent;
+}
+.forgot-pass form .submit-btn{
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 20px;
+    background-color: #002438;
+    background-position: center;
+    color: white;
+    outline: none;
+    align-self: center;
+    width: 50%;
+    height: 45px;
+    border-width: 0px;
+    border-radius: 50px;
+    /* border-color: #002438; */
+    transition: background 0.6s;
+}
+.forgot-pass form .submit-btn:hover{
+    background-position: center;
+    background-size: 20000%;
+    background-color: #00a393;
+    outline: none;
+    border: none;
+    /* background-image: radial-gradient(circle, transparent 1%, #00a39300 1%); */
+}
+/* @media only screen and (min-width:1148px)*/
+@media only screen and (min-width : 1224px){ 
+    .login-details.forgot-pass h2{
+        font-size: 30px;
+        padding-top: 20px;
+    }
+    .login-details.forgot-pass form #forgotEmail,
+    .login-details.forgot-pass form .submit-btn{
+        height: 35px;
+    }
+}
+@media only screen and (max-width:1025px){
+    #forgotEmail{
+        width: 80%;
+        align-self: center;
+    }
+    .forgot-pass form{
+        width: 100%;
+    }
+    .login-details.forgot-pass h2{
+        font-size: 30px;
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (max-width:425px){
+    #forgotEmail{
+        width: 100%;
+    }
+    .forgot-pass form{
+        width: 100%;
+    }
+    .login-details.forgot-pass h2{
+        font-size: 25px;
+        margin-top: 40px;
+    }
+}
+/* //////////////////////////////////----Reset Pass page----\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+.reset-pass{
+    gap: 40px;
+}
+.reset-pass h2{
+    align-self: center;
+}
+.reset-pass .forgot-description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.424);
+    height: 110px;
+    width: 80%;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+.reset-pass form{
+    gap: 20px;
+}
+
+
+.reset-pass form #resetNewPass, .reset-pass form #resetConfirmNewPass{
+    height: 40px;
+    width: 80%;
+    align-self: center;
+    outline: none;
+    border-radius: 50px;
+    padding-left: 20px;
+    border-color: transparent;
+}
+.reset-pass form span{
+    position: absolute;
+    top: 320px;
+    font-size: 10px;
+    align-self: center;
+}
+.reset-pass form .submit-btn{
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 20px;
+    background-color: #002438;
+    background-position: center;
+    color: white;
+    outline: none;
+    align-self: center;
+    width: 50%;
+    height: 45px;
+    border-width: 0px;
+    border-radius: 50px;
+    /* border-color: #002438; */
+    transition: background 0.6s;
+}
+.reset-pass form .submit-btn:hover{
+    background-position: center;
+    background-size: 20000%;
+    background-color: #00a393;
+    outline: none;
+    border: none;
+    /* background-image: radial-gradient(circle, transparent 1%, #00a39300 1%); */
+}
+/* @media only screen and (min-width:1148px)*/
+@media only screen and (min-width : 1224px){ 
+    .login-details.reset-pass h2{
+        font-size: 30px;
+        padding-top: 20px;
+    }
+    .login-details.reset-pass form #resetNewPass,
+    .login-details.reset-pass form #resetConfirmNewPass,
+    .login-details.reset-pass form .submit-btn{
+        height: 35px;
+        margin-top: 10px;
+    }
+    .login-details.reset-pass form{
+        gap: 25px;
+    }
+}
+@media only screen and (max-width:1025px){
+    #resetNewPass, #resetConfirmNewPass{
+        width: 80%;
+        align-self: center;
+    }
+    .reset-pass form{
+        width: 100%;
+    }
+    .reset-pass form .submit-btn{
+        font-size: 20px;
+    }
+    .login-details.reset-pass h2{
+        font-size: 30px;
+        /* margin-top: 10px; */
+    }
+}
+@media only screen and (max-width:425px){
+    #resetNewPass, #resetConfirmNewPass{
+        width: 100%;
+    }
+    .reset-pass form{
+        width: 100%;
+    }
+    .login-details.reset-pass h2{
+        font-size: 25px;
+        margin-top: 10px;
+        
+    }
+}
+
+
+/* //////////////////////////////////----SIDEBAR STYLING----\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+body{
+    font-family: roboto;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+#check{
+    display: none;
+}
+label #hamburger-bars, label #hamburger-cancel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    
+    top: 15px;
+    left: 20px;
+    height: 45px;
+    width: 45px;
+    margin: auto;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    background: #002438;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    z-index: 10;
+}
+label #hamburger-cancel{
+    opacity: 0;
+    visibility: hidden;
+}
+#check:checked ~ label #hamburger-bars{
+    left: 300px;
+    opacity: 0;
+    visibility: hidden;
+}
+#check:checked ~ label #hamburger-cancel{
+    left: 300px;
+    opacity: 1;
+    visibility: visible;
+}
+#check:checked ~ .sidebar{
+    left: 0px;
+}
+/* OLD HAMBURGER BELOW */
+/* .hamburger{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  left: 45px;
+  height: 45px;
+  width: 45px;
+  margin: auto;
+  text-align: center;
+  background: #002438;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: left 0.4s ease;
+  z-index: 1;
+}
+.hamburger.click{
+  left: 300px;
+} */
+
+/*.hamburger label{
+    position: absolute;
+  color: white;
+  font-size: 28px;
+   line-height: 45px; */
+  /* padding-top: 2px; 
+  align-content: center;
+}*/
+/* .hamburger.click span:before{
+  content: '\f00d';
+} */
+.sidebar header{
+    user-select: none;
+    font-size: 50px;
+    margin-top: -12%;
+    padding-top: 65px;
+    padding-bottom: 35px;
+    text-align: center;
+    line-height: 20px;
+    color: #002438;
+    font-weight: 1000;
+    line-height: 30px;
+    
+    background-color:  rgb(255, 255, 255, 100%);
+
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+    
+}
+.sidebar header span{
+    font-size: 25px;
+    font-weight: 400;
+}
+.sidebar ul{
+
+  overflow: visible;
+  margin-top: 45px;
+  font-size: 15px;
+  color: white;
+  /* text-align: center; */
+  /* padding-right: 50px; */
+  text-decoration: none;
+}
+.sidebar{
+    top: 0px; /* added during new hamburger
+    to stop from showing top gap*/
+    position: fixed;
+    overflow: hidden;
+    width: 280px;
+    height: 100vh;
+    left: -314px;
+    background: #002438;
+    transition: left 0.4s ease;
+    box-shadow: hsla(0, 0%, 0%, 0.219) 7px 2px 15px;
+    z-index: 10;
+}
+.sidebar.show{
+  left: 0px;
+  height: 100vh;
+}
+/* .sidebar .text{
+  color: white;
+  font-weight: 600;
+  background: #002438;
+  letter-spacing: 1px;
+} */
+nav ul{
+  background: #002438;
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  
+}
+nav ul li{
+  
+  line-height: 40px;
+  margin-top: 30px;
+  /* border-top: 1px solid rgba(255,255,255,0.1); */
+}
+ /*nav ul li:last-child{
+  border-bottom: 1px solid rgba(255,255,255,0.05); 
+}*/
+nav ul li a{
+  user-select: none;
+  position: relative;
+  color: white;
+  text-decoration: none !important;
+  font-size: 20px;
+  padding-left: 80px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  border-left: 3px solid transparent;
+}
+nav ul li.active a{
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 100px;
+    color: #002438;
+    font-weight: 600;
+    background: rgb(255, 255, 255);
+    border-left-color: rgb(255, 255, 255);
+}
+nav ul li.active a:hover{
+    color: #002438;
+}
+nav ul li a:hover{
+  color: cyan;
+}
+nav ul ul{
+  position: static;
+  display: none;
+  
+}
+/* submenu arrows */
+nav ul .user-submenus .submenu-arrow-vehicle,
+.submenu-arrow-health, .submenu-arrow-fire{
+    position: absolute;
+    top: 0%;
+    left: 70%;
+}
+nav ul .user-submenus.show-user-sub-menu{
+  padding-left: 40px;
+  display: block;
+  margin-top: 25px;
+}
+/* submenu's submenu */
+
+nav ul .user-submenus .submenu__sub-vehicle.show-submenu__sub-menu{
+    display: block;
+}
+nav ul .user-submenus .submenu__sub-health.show-submenu__sub-menu{
+    display: block;
+}
+nav ul .user-submenus .submenu__sub-fire.show-submenu__sub-menu{
+    display: block;
+}
+nav ul .user-submenus .show-submenu__sub-menu{
+    position: relative;
+    /* display: flex; */
+    left: -20px;
+    top: -10px;
+    /* background-color: #25b3ff; */
+    width: 100%;
+    
+    
+}
+nav ul .user-submenus .show-submenu__sub-menu a{
+    /* display: flex; */
+    /* flex-direction: column; */
+    background-color: transparent;
+    
+    /* font-size: 15px; */
+    /* padding: 5px; */
+}
+nav ul ul li {      /*submenu */
+  position: relative;
+  line-height: 15px;
+  padding-left: 60px;
+  border-top: none;
+}
+
+nav ul ul li a{
+    
+  font-weight: 600;
+  font-size: 17px;
+  color: #e6e6e6;
+  padding-left: 15px;
+}
+nav ul li ul li a{
+    color: #e6e6e6;
+    background: #002438;
+    border-left-color: cyan;
+    
+}
+nav ul li.active ul li a{
+  color: #e6e6e6;
+  background: #002438;
+  border-left-color: cyan;
+  
+}
+nav ul ul li a:hover{
+  color: cyan!important;
+  background: #002438!important;
+}
+nav ul ul ul li{ /*submenu inside submenu*/
+    /* position: absolute; */
+    
+    padding-left: 40px;
+    /* color: white; */
+}
+nav ul li a span{
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: transform 0.4s;
+}
+nav ul li a span.rotate{
+  transform: translateY(-50%) rotate(90deg);
+}
+nav ul li a .submenu-arrow-vehicle,
+.submenu-arrow-health, .submenu-arrow-fire{
+    position: absolute;
+    top: 0%;
+    right: 30px;
+    /* transform: translateY(-50%); */
+    font-size: 15px;
+    transition: transform 0.4s;
+}
+nav ul ul li a .submenu-arrow-vehicle.rotate,
+.submenu-arrow-health.rotate, .submenu-arrow-fire.rotate{
+    transform: translateY(50%) rotate(90deg);
+}
+
+.customer-show{
+    margin-top: 0px!important;
+}
+.lead-show{
+    margin-top: 0px!important;
+}
+#sidebarDesign{
+    position: absolute;
+    /* overflow: hidden; */
+    bottom: -80px;
+    width: 110%;
+    /* left: 0px; */
+    /* transform: rotate(-5deg); */
+    z-index: 10;
+    user-select: none;
+    pointer-events: none;
+}
+@media only screen and (min-width: 1148px){
+    .sidebar header{
+        
+        font-size: 40px;
+        margin-top: -20%;
+        padding-bottom: 10px;
+        border-bottom-left-radius: 200px;
+        border-bottom-right-radius: 200px;
+        
+    }
+    .sidebar header span{
+        position: relative;
+        font-size: 20px;
+        font-weight: 400;
+        top: -10px;
+    }
+    .sidebar{
+        /* top: 0px; added during new hamburger
+        to stop from showing top gap*/
+        width: 220px;
+    }
+    .sidebar ul{
+        margin-top: 30px;
+    }
+    nav ul li a{
+        font-size: 15px;
+        padding-left: 70px;
+        font-weight: 500;
+    }
+    /* sidebar submenu font settings */
+    nav ul ul li a{
+        font-size: 13px;
+        /* font-weight: 400; */
+    }
+    nav ul li{
+        line-height: 20px;
+    }
+    /*sidebar submenu line height  */
+    nav ul ul li{
+        line-height: 5px;
+    }
+    nav ul li a span{
+        font-size: 15px;
+    }
+    nav ul li.active > a{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        
+    }
+}
+@media only screen and (min-width:1025px){
+    label #hamburger-bars, label #hamburger-cancel{
+        display: none;
+    }
+    /* .hamburger{
+        display: none;
+    } */
+    .sidebar{
+        left: 0px;
+        height: 100vh;
+    }
+}
+@media only screen and (max-width:1025px){
+    /* #sidebarDesign{
+        display: none;
+    } */
+    #check:checked ~ label #hamburger-bars, #check:checked ~ label #hamburger-cancel{
+        left: 290px;
+    }
+    .hamburger{
+        left: 10px;
+        
+    }
+    .sidebar{
+        height: 100vh;
+    }
+    
+}
+@media only screen and (max-width:425px){
+    .sidebar{
+        width: 260px;
+    }
+    #check:checked ~ label #hamburger-bars, #check:checked ~ label #hamburger-cancel{
+        left: 270px;
+    }
+}
+
+/*///////////////////////////////////////////////////////////--PAGE CONTENT WRAPPER START--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+
+.page-content-wrapper{
+    margin-left: 280px;
+}
+/* /////////////for laptop///////////// */
+@media only screen and (min-width:1224px){
+    .page-content-wrapper{
+        margin-left: 220px;
+    }
+    .container{
+        padding-right: 20px!important;
+    }
+}
+@media only screen and (max-width:1025px){
+    .page-content-wrapper{
+        margin-left: 20px;
+    }
+    .container{
+        padding-right: 20px!important;
+    }
+}
+/* <<<<<<<<<<<<<<add-user-form: tablet and mobile responsive settings below>>>>>>> */
+@media only screen and (max-width:768px){
+    .container{
+        padding-right: 20px!important;
+    }
+    .form-top{
+        flex-direction: column;
+    }
+    .form-top .form-top-right{
+        display: flex;
+        align-self: center;
+        order: 1;
+        width: 40%!important;
+        height: 250px
+
+    }
+    .form-top .form-top-left{
+        order: 2;
+        width: 100%!important;
+    }
+}
+@media screen and (max-width:425px ){
+    .container{
+        padding-right: 10px!important;
+    }
+    .form-top .form-top-right{
+        width: 95%!important;
+        margin: 0px!important;
+    }
+    .form-top .top1{
+        flex-direction: column;
+        gap: 10px!important;
+    }
+    .form-top .top3{
+        flex-direction: column;
+        gap: 10px!important;
+
+    }
+    .form-top .top3 .c-vehicle-class{
+        width: 100%!important;
+    }
+    .form-top .top4{
+        flex-direction: column;
+        gap: 10px!important;
+
+    }
+    .form-top .top4 .c-vehicle-type{
+        width: 100%!important;
+    }
+    .form-top .top4 .c-expiry-date{
+        width: 100%!important;
+    }
+    .form-bottom .botm1{
+        flex-direction: column;
+        gap: 10px!important;
+    }
+    .form-bottom .botm1 .c-existing-insurer{
+        width: 100%!important;
+    }
+    .form-bottom .botm1 .c-present-policy-num{
+        width: 100%!important;
+    }
+    .form-bottom .botm2{
+        flex-direction: column;
+        gap: 10px!important;
+    }
+    .form-bottom .botm2 .c-make-and-model{
+        width: 100%!important;
+    }
+    .form-bottom .botm2 .c-insured-declared-value{
+        width: 100%!important;
+    }
+    .form-bottom .botm3{
+        flex-direction: column;
+        gap: 10px!important;
+    }
+    .form-bottom .botm3 .c-sub-container{
+        width: 100%!important;
+    }
+    .form-bottom .botm3 .c-remarks{
+        width: 100%!important;
+    }
+    .add-user-save-btn , .add-user-reset-btn, .add-user-saveAsDraft-btn{
+        font-size: 17px!important;
+        height: 40px!important;
+        align-content: center;
+    }
+}
+
+.page-content-wrapper.click{
+    margin-left: 20px;
+}
+
+
+.container{
+    max-width: 100%;
+    padding-left: 3%;
+    padding-right: 50px;
+    margin-left: -10px;
+}
+.row{
+    margin: auto;
+    align-content: stretch;
+    padding-top: 20px;
+    padding-left: 10px;
+    column-gap: 25px;
+}
+.col-sm{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: fit-content;
+    
+    height: fit-content;
+    border-radius: 30px;
+    margin-right: 75px;
+    margin-bottom: 20px;
+    box-shadow: 4px 3px 12px rgba(0,0,0,20%);
+}
+.newleads{
+    background-color: #57BF5B;
+}
+.policy-renewals{
+    background-color: #57BF5B;
+}
+.total-customers{
+    background-color: #62BBED;
+}
+h5{
+    color: rgb(255, 255, 255);
+}
+
+.counter{
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+}
+h1{
+    text-align: center;
+    padding-top: 50px;
+    font-weight: bold;
+    
+}
+
+/* ----------------------------------TOP BUTTONS------------------------------------ */
+.top-buttons{
+    margin-top: 30px;
+    display: flex;
+    vertical-align: middle;
+}
+
+.top-buttons .dropdown-customer-add-btn .dropdown-toggle{
+    position: relative;
+    overflow: hidden;
+    height: 50px;
+    margin-right: 15px;
+    font-size: 22px;
+    font-weight: 500;
+    background-color: #002438;
+    border-radius: 25px;
+    padding: 0px 35px;
+    border-width: 0px;
+    border-color: transparent;
+    box-shadow: hsl(10, 0%, 6%) 5px 3px 15px -8px;
+    
+}
+.top-buttons .dropdown-customer-add-btn .dropdown-toggle:after{
+    content: "";
+    background: #ffffff;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    border-radius: 50%;
+    padding-left: 250%;
+    margin-left: -70px!important;
+    margin-top: -100%;
+    opacity: 0;
+    transition: all 0.8s
+}
+.top-buttons .dropdown-customer-add-btn .dropdown-toggle:active::after{
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+.top-buttons .dropdown-customer-add-btn .drop-down{
+    background-color: #014B75;
+    border-radius: 15px;
+    text-align: center;
+    
+}
+.top-buttons .dropdown-customer-add-btn .drop-down .droppedItem:hover{
+    color: #002438 !important;
+    
+}
+.top-buttons .dropdown-customer-add-btn .drop-down .droppedItem:active{
+    color: #25b3ff !important;
+    
+}
+
+.top-buttons .dropdown-lead-add-btn .dropdown-toggle{
+    position: relative;
+    overflow: hidden;
+    height: 50px;
+    margin-right: 15px;
+    font-size: 22px;
+    font-weight: 500;
+    background-color: #002438;
+    border-radius: 25px;
+    padding: 0px 35px;
+    border-width: 0px;
+    border-color: transparent;
+    box-shadow: hsl(10, 0%, 6%) 5px 3px 15px -8px;
+    
+}
+.top-buttons .dropdown-lead-add-btn .dropdown-toggle:after{
+    content: "";
+    background: #ffffff;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    border-radius: 50%;
+    padding-left: 250%;
+    margin-left: -70px!important;
+    margin-top: -100%;
+    opacity: 0;
+    transition: all 0.8s
+}
+.top-buttons .dropdown-lead-add-btn .dropdown-toggle:active:after{
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+.top-buttons .dropdown-lead-add-btn .drop-down{
+    background-color: #014B75;
+    border-radius: 15px;
+    text-align: center;
+    
+}
+.top-buttons .dropdown-lead-add-btn .drop-down .droppedItem:hover{
+    color: #002438 !important;
+    
+}
+.plus-icon{
+    display: inline-block;
+    position: relative;
+    top: -7%;
+    left: -20%;
+
+}
+
+.plus-icon .line1{
+    width: 18px;
+    height: 3.5px;
+    border-radius: 50px;
+    background-color: #fff;
+    position: relative;
+    transform: translate(10%, 10%);
+}
+.plus-icon .line2{
+    width: 18px;
+    height: 3.5px;
+    border-radius: 50px;
+    background-color: #fff;
+    position: relative;
+    transform: translate(10%, -80%) rotate(90deg);
+}
+
+.input-group{
+    position: relative;
+    top: 7px;
+    width: 300px;
+}
+.input-group input{
+    border-radius: 20px;
+    border-color: #002438;
+    border-width: 2px;
+    border-right-color: transparent;
+    height: 40px;
+}
+.input-group-append .btn-secondary{
+    background-color: transparent;
+    height: 40px;
+    border-radius: 20px;
+    border-width: 2px;
+    border-color: #002438;
+}
+.btn-secondary .searchbtn{
+    color: #002438!important;
+}
+
+.input-group-append .btn-secondary{
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
+
+}
+.input-group-append .btn-secondary:after{
+    content: "";
+    background: #002438;
+    display: block;
+    position: absolute;
+    padding-top: 350%;
+    border-radius: 50%;
+    padding-left: 250%;
+    margin-left: -20px!important;
+    margin-top: -190%;
+    opacity: 0;
+    transition: all 0.8s
+}
+.input-group-append .btn-secondary:active:after{
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+
+/* ////////////////////////////--TABLES customer/leads/my tasks--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\- */
+
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////
+////////////// Class name "customer" is given for all tables in this web app ////////////////////// 
+///////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+table{
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 7px 10px 10px -10px;
+    border-radius: 10px;
+    
+}
+.customer thead{
+    /* color: white; 
+    background-color: #002438;*/
+    vertical-align: middle;  
+    box-shadow: 5px 3px 20px -50px;  
+}
+.customer .drop-down{
+
+    text-align: center;
+    background-color: #014B75;
+    border-radius: 10px;
+}
+.customer .droppedItem:hover{
+
+    color: #002438 !important;
+}
+
+tbody{
+    font-size: 18px;
+    font-weight: 500;
+}
+tbody .edit-del-buttons{
+    display: flex;
+    margin-right: 30px;
+}
+/* previously had additional class of .btn-secondary close to .edit-buttons */
+tbody .ed-buttons{
+    position: relative;
+    left: 30%;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #002438;
+    padding-top: 7px;
+}
+.customer tbody tr td{
+    vertical-align: middle;
+}
+.customer thead tr th{
+    vertical-align: middle;
+}
+.customer thead .th-right{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 0px;
+}
+.customer thead .th-left{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 0px;
+}
+.customer thead{
+    color: white;
+    background-color:  #002438;
+}
+table{
+    border-top: hidden;
+    border-right: hidden;
+}
+.customer thead .expiry-btn{
+    display: flex;
+    padding-left: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 4px;
+    width: 170px;
+    height: 55px;
+    background-color: #014B75;
+    border-radius: 70px;
+}
+.expiry-btn-icon{
+    width: 40px;
+    height: 40px;
+    padding-top: 5px;
+}
+.table-head .dropdown-customer-exp-date{ /*same dropdown class used for fire policy and */
+    position: relative;
+}
+.table-head .dropdown-customer-exp-date .dropdown-toggle-c-exp-date{
+    font-size: 17px;
+    background-color: #014B75;
+    width: 150px;
+    border-radius: 70px;
+    border-color: transparent;
+}
+
+.table-head .dropdown-customer-exp-date .drop-down-exp-date{
+    position: absolute;
+    /* top: 198px !important; */
+    /* left: 1200px !important; */
+    color: white;
+    overflow: hidden;
+    background-color: #014B75;
+    border-radius: 15px;
+}
+/* laptops */
+@media only screen and (min-width:1224px){
+    .top-buttons{
+        padding-top: 10px;
+        margin: 0;
+    }
+    .top-buttons .dropdown-customer-add-btn .dropdown-toggle:hover{
+        background-color: #00507a;
+    }
+    .top-buttons .dropdown-customer-add-btn .dropdown-toggle{
+        height: 35px;
+        padding: 0;
+        font-size: 15px;
+        padding: 0px 30px 0px
+    }
+    .top-buttons .dropdown-customer-add-btn .dropdown-toggle .plus-icon .line1,
+    .top-buttons .dropdown-customer-add-btn .dropdown-toggle .plus-icon .line2{
+        width: 15px;
+        top: 2px;
+        
+    }
+    .top-buttons .input-group{
+        width: 250px;
+        top: 3px;
+        
+    }
+    .top-buttons .input-group input{
+        font-size: 13px;
+    }
+    .top-buttons .input-group input,
+    .top-buttons .input-group .input-group-append button{
+        height: 30px;
+        
+    }
+    .top-buttons .input-group .input-group-append button i{
+        top: -3px;
+        position: relative;
+    }
+    /* table header */
+    .customer .table-head{
+        font-size: 14px;
+    }
+    
+    .customer .table-head th{
+        font-weight: 450;
+        user-select: none;
+    }
+    .customer .table-head .dropdown-customer-exp-date button{
+        padding: 0;
+        font-size: 14px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    } 
+    /* table body */
+    .customer tbody{
+        font-size: 14px;
+    }
+    /* edit del button background */
+    .customer tbody .edit-del-buttons .ed-buttons{
+        width: 30px;
+        height: 30px;
+        padding-top: 4px;
+        cursor: pointer;
+    }
+    /* icons of edit delete buttons>>>> 
+        font size used instead of width and height */
+    .customer tbody .edit-del-buttons .ed-buttons i{
+        font-size: 13px;
+        padding-top: 5px;
+    }
+
+}
+/* below laptop resolution */
+@media only screen and (max-width:1224px){
+    .top-buttons{
+        padding-top: 10px;
+        margin: 0;
+    }
+    .top-buttons .dropdown-customer-add-btn .dropdown-toggle:hover{
+        background-color: #00507a;
+    }
+    .top-buttons .dropdown-customer-add-btn .dropdown-toggle{
+        height: 35px;
+        padding: 0;
+        font-size: 15px;
+        padding: 0px 30px 0px
+    }
+    .top-buttons .dropdown-customer-add-btn .dropdown-toggle .plus-icon .line1,
+    .top-buttons .dropdown-customer-add-btn .dropdown-toggle .plus-icon .line2{
+        width: 15px;
+        top: 2px;
+        
+    }
+    .top-buttons .input-group{
+        width: 250px;
+        top: 3px;
+        
+    }
+    .top-buttons .input-group input{
+        font-size: 13px;
+    }
+    .top-buttons .input-group input,
+    .top-buttons .input-group .input-group-append button{
+        height: 30px;
+        
+    }
+    .top-buttons .input-group .input-group-append button i{
+        top: -3px;
+        position: relative;
+    }
+    /* table header */
+    .customer .table-head{
+        font-size: 15px;
+    }
+    
+    .customer .table-head th{
+        font-weight: 450;
+        user-select: none;
+
+    }
+    .customer .table-head .dropdown-customer-exp-date button{
+        padding: 0;
+        font-size: 14px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    } 
+    .customer tbody{
+        font-size: 15px;
+    }
+    /* edit del button background */
+    
+    .customer tbody .edit-del-buttons .ed-buttons{
+        width: 30px;
+        height: 30px;
+        padding-top: 4px;
+        cursor: pointer;
+    }
+    /* icons of edit delete buttons>>>> 
+        font size used instead of width and height */
+    .customer tbody .edit-del-buttons .ed-buttons i{
+        font-size: 13px;
+        padding-top: 5px;
+    }
+}
+/* //////////////////////////////////////////--Reports Page--///////////////////////////////////////////////////*/
+
+
+.reports .report-filter{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 50px;
+    margin-right: 60px;
+    align-content: flex-start;
+
+}
+.reports .report-filter label{
+    align-self: flex-start;
+}
+.reports .report-filter .custom-select{
+    border-radius: 10px;
+}
+#reportFilter{
+    width: 20%;
+    border-radius: 20px;
+    /* background-color: #53b9f0; */
+    /* color: white; */
+    border-color: #002438;
+    margin-right: 60px;
+}
+.graph-row1{
+    margin-top: 30px;
+    width: 100%;
+    align-items: flex-end;
+    margin-left: 40px;
+    margin-right: 60px;
+}
+.graph-row1 .graph-r1-c1{
+    background-color: #fff;
+    height: 480px;
+    border-radius: 20px;
+    margin-right: 10px;
+    width: 33%;
+
+}
+.graph-row1 h4{
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.graph-row1 .graph-r1-c1 .date-filter{
+    position: absolute;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    left: 50px;
+    top: 100px;
+    z-index: 1;
+}
+.graph-row1 .graph-r1-c2 .date-filter{
+    position: absolute;
+    font-weight: 500;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    left: 50px;
+    top: 100px;
+    z-index: 1;
+
+}
+.graph-row1 .graph-r1-c3 .date-filter{
+    position: absolute;
+    font-weight: 500;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    left: 50px;
+    top: 100px;
+    z-index: 1;
+}
+
+.date-filter img{
+    position: absolute;
+    width: 30px;
+    height: 30px
+}
+.graph-row1 .graph-r1-c1 .graph-col-1{
+    background-color: #002438;
+    margin-left: 0%;
+    height: 380px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+.graph-row1 .graph-r1-c1 .graph-col-1 #insp-chart{
+    position: relative;
+    overflow: hidden;
+
+}
+.graph-row1 .graph-r1-c2 .graph-col-2 #intr-chart{
+    position: relative;
+    overflow: hidden;
+    top: 60px;
+    left: 30px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.graph-row1 .graph-r1-c3 .graph-col-3 #lead-chart{
+    position: relative;
+    overflow: hidden;
+
+}
+
+.graph-row1 .graph-r1-c2{
+    background-color: #fff;
+    height: 480px;
+    border-radius: 20px;
+    margin-right: 10px;
+    width: 33%;
+}
+.graph-row1 .graph-r1-c2 .graph-col-2{
+    background-color: #002438;
+    margin-left: 0%;
+    height: 380px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+}
+.graph-row1 .graph-r1-c3{
+    background-color: #fff;
+    height: 480px;
+    border-radius: 20px;
+    margin-right: 100px;
+    width: 33%;
+}
+.graph-row1 .graph-r1-c3 .graph-col-3{
+    background-color: #002438;
+    margin-top: 20px;
+    height: 380px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+}
+.graph-row1 .graph-r1-c3 h4{
+    padding-top: 22px;
+}
+.graph-row2{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    margin-left: 50px;
+    padding-right: 18px;
+    margin-right: 60px;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+}
+.graph-row2 .graph-row-2{
+    display: flex;
+    overflow: hidden;
+    align-self: flex-start;
+    background-color: #002438;
+    width: 100%;
+    height: 375px;
+    margin-top: -5px;
+    box-shadow: 10px 5px 12px rgba(0,0,0,0.2);
+    margin-left: 5px;
+    border-radius: 20px;
+
+}
+.graph-row2 .graph-row-2 .date-filter{
+    position: absolute;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    transform: translate(40px, 15px);
+    z-index: 1;
+}
+.graph-row2 .graph-row-2 #piechart{
+    position: relative;
+    margin-left: -20px;
+    margin-top: 20px;
+    width: 45%;
+    overflow: hidden;
+
+}
+.graph-row2 .graph-row-2 .vline{
+    position: relative;
+    width: 2px;
+    overflow: hidden;
+    transform: translate(0px, 19px);
+    height: 90%;
+    background-color: white;
+}
+.graph-row2 .graph-row-2 .row-2-list{
+    width: 54%;
+    font-weight: 600;
+    height: 100%;
+    align-content: center;
+}
+.graph-row2 .graph-row-2 .row-2-list h4{
+    margin: 30px 0px 0px 50px;
+    text-align-last: center;
+    background-color: white;
+    font-size: 20px;
+    width: 90%;
+    align-self: center;
+}
+.graph-row2 .graph-row-2 .row-2-list table{
+    color: white;
+    font-weight: 300;
+    box-shadow: none;
+}
+.graph-row1 button{
+    background-color: transparent;
+    border-color: transparent;
+}
+.graph-row2 button{
+    background-color: transparent;
+    border-color: transparent;
+}
+.graph-row1 button:hover{
+    color: #fff;
+    background-color: #014B75;
+    border-color: transparent;
+}
+.graph-row2 button:hover{
+    color: #fff;
+    background-color: #014B75;
+    border-color: transparent;
+}
+.graph-row1 button:active{
+    color: #fff;
+    background-color: #014B75;
+    border-color: transparent;
+}
+.graph-row2 button:active{
+    color: #fff;
+    background-color: #014B75;
+    border-color: transparent;
+}
+
+.graph-row1 .drop-down{
+    font-size: 13px;
+    /* text-align: center; */
+    background-color: #014B75;
+    border-radius: 10px;
+}
+.graph-row1 .droppedItem:hover{
+
+    color: #002438 !important;
+}
+.graph-row2 .drop-down{
+    font-size: 13px;
+    /* text-align: center; */
+    background-color: #014B75;
+    border-radius: 10px;
+}
+.graph-row2 .droppedItem:hover{
+
+    color: #002438 !important;
+}
+
+
+/* -------REPORT responsive -------*/
+
+
+@media only screen and (min-width:1224px){
+    .reports .report-filter{
+        margin-left: 0px;
+    }
+    #reportFilter{
+        height: 35px;
+    }
+    .row{
+        padding-left: 0px;
+        width: 100%;
+        
+    }
+    .graph-row1{
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 10px;
+        justify-content: stretch;
+        align-items: center;
+    }
+    
+    .graph-r1-c1, .graph-r1-c2, .graph-r1-c3{
+        width: 33.33vw;
+    } 
+    
+}
+/*///////////////////////////////////----SMS PAGE----///////////////////////////////////*/
+
+.sms-container{
+    margin-top: 60px;
+    padding-bottom: 50px;
+    width: 100%;
+    height: fit-content;
+    box-shadow: 7px 10px 10px -10px;
+    padding-right: 60px;    
+    border-radius: 20px;
+    background-color: #002438;
+    overflow: hidden;
+}
+.sms-container p{
+    color: white;
+    font-size: 20px;
+    padding-left: 30px;
+    padding-top: 25px;
+}
+.sms-container .underline{
+    position: relative;
+    top: -20px;
+    left: 30px;
+    width: 200px;
+    height: 1px;
+    background-color: white;
+}
+.sms-container .notify-renew{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+}
+.sms-container .notify-expire{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+}
+.sms-container .notify-renew .switch-renew{
+    position: relative;
+    right: -60px;
+    top: 5px;
+}
+.sms-container .notify-expire .switch-expire{
+    position: relative;
+    right: -60px;
+    top: 5px;
+}
+.sms-container .underline2{
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 0.5px;
+    top: -15px;
+    left: 30px;
+    opacity: 20%;
+}
+.sms-container .sms-form{
+    display: flex;
+    margin-left: 30px;
+    width: 100%;
+}
+#notifyMessageForm{
+    min-height: 100px;
+}
+/* laptops */
+@media only screen and (min-width:1224px){
+    .sms-container p{
+        font-size: 15px;
+    }
+    .sms-container .underline{
+        top: -15px;
+    }
+}
+@media only screen and (max-width:1224px){
+    .sms-container p{
+        font-size: 15px;
+    }
+    .sms-container .underline{
+        top: -15px;
+    }
+}
+
+
+/* ////////////////////////////////////---------PROFILE--------//////////////////////////////////// */
+.edit-button{
+    margin-top: 30px;
+}
+.edit-button .edit-btn{
+    position: relative;
+    overflow: hidden;
+    height: 50px;
+    margin-right: 15px;
+    font-size: 22px;
+    font-weight: 500;
+    background-color: #002438;
+    border-radius: 25px;
+    padding: 0px 35px;
+    border-width: 0px;
+    border-color: transparent;
+    box-shadow: hsl(10, 0%, 6%) 5px 3px 15px -8px;
+    
+}
+.edit-button .edit-btn:after{
+    content: "";
+    background: #ffffff;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    border-radius: 50%;
+    padding-left: 250%;
+    margin-left: -70px!important;
+    margin-top: -100%;
+    opacity: 0;
+    transition: all 0.8s
+}
+.edit-button .edit-btn:active:after{
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+.profile-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    box-shadow: 7px 10px 10px -10px;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    height: fit-content;
+    box-shadow: 7px 10px 10px -10px;
+    border-radius: 20px;
+    background-color: #002438;
+    overflow: hidden;
+    
+}
+.profile-container tbody{
+    font-size: 20px;
+    background-color: #002438;
+}
+.profile-container .details-leftside{
+    text-align: center;
+    width: 49%;
+    height: fit-content;
+    overflow: hidden;
+}
+.profile-container .details-rightside{
+    text-align: center;
+    width: 49%;
+    height: fit-content;
+    overflow: hidden;
+}
+.profile-container .vertical-line{
+    position: relative;
+    width: 2px;
+    background-color: white;
+    height: 260px;
+}
+.profile-container .details-leftside .profile-table-left{
+    color:white;
+    position: relative;
+    box-shadow: none;
+    text-align: left;
+    margin-left: 50px;
+    
+}
+.profile-container .details-rightside .profile-table-right{
+    color:white;
+    position: relative;
+    box-shadow: none;
+    text-align: left;
+    margin-left: 50px;
+    
+}
+/* -------profile details form below-------*/
+#newPassword{
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    border-color: transparent;
+}
+#confirmPassword{
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    border-color: transparent;
+}
+#currentPassword{
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    border-color: transparent;
+}
+/* ------------- */
+.save-button{
+    margin-top: 20px;
+    float: right;
+    margin-right: -10px;
+}
+.save-button .save-btn{
+    position: relative;
+    overflow: hidden;
+    height: 50px;
+    margin-right: 15px;
+    font-size: 22px;
+    font-weight: 500;
+    background-color: #002438;
+    border-radius: 25px;
+    padding: 0px 35px;
+    border-width: 0px;
+    border-color: transparent;
+    box-shadow: hsl(10, 0%, 6%) 5px 3px 15px -8px;
+    
+}
+.save-button .save-btn:after{
+    content: "";
+    background: #ffffff;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    border-radius: 50%;
+    padding-left: 250%;
+    margin-left: -70px!important;
+    margin-top: -100%;
+    opacity: 0;
+    transition: all 0.8s
+}
+.save-button .save-btn:active:after{
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+
+/*---------- PROFILE MEDIA QUERIES ------*/
+
+/* laptops */
+@media only screen and (min-width:1224px){
+    .page-content-wrapper .container h1{
+        font-size: 30px;
+        padding-top: 10px;
+    }
+    .edit-button .edit-btn{
+        margin-top: -20px;
+        font-size: 15px;
+        height: 35px;
+        padding: 0px 20px 0px
+    }
+    .save-button .save-btn{
+        font-size: 15px;
+        height: 35px;
+        padding: 0px 50px 0px
+    }
+    .profile-container tbody{
+        font-size: 15px;
+    }
+    .profile-container .details-leftside .profile-table-left{
+        margin-left: 10px;
+    }
+    .profile-container .vertical-line{
+        height: 300px;
+        background-image: radial-gradient();
+        width: 1px;
+    }
+}
+@media only screen and (max-width:1224px){
+    .page-content-wrapper .container h1{
+        font-size: 30px;
+        padding-top: 10px;
+    }
+    .edit-button .edit-btn{
+        margin-top: -20px;
+        font-size: 15px;
+        height: 35px;
+        padding: 0px 20px 0px
+    }
+    .save-button .save-btn{
+        font-size: 15px;
+        height: 35px;
+        padding: 0px 50px 0px
+    }
+    .profile-container tbody{
+        font-size: 15px;
+    }
+    .profile-container .details-leftside .profile-table-left{
+        margin-left: 10px;
+    }
+    .profile-container .vertical-line{
+        height: 300px;
+        background-image: radial-gradient();
+        width: 1px;
+    }
+}
+/* tablet */
+@media only screen and (max-width:769px){
+    .profile-container{
+        /* order: 1; */
+        flex-direction: column;
+    }
+    
+    .profile-container .vertical-line{
+        display: none;
+    }
+    .profile-container .details-leftside{
+        overflow: visible;
+        width: 100%;
+        
+    }
+    .profile-container .profile-table-right tbody .dots{
+        position: relative;
+        left: 15px;
+    } 
+    .profile-container .profile-table-right tbody .right-form{
+        position: relative;
+        left: 15px;
+    }
+    .profile-container .details-rightside{
+        overflow: visible;
+        width: 100%;
+    }
+    .profile-container .details-rightside .profile-table-right{
+        margin-left: 10px;
+    }
+}
+@media only screen and (max-width:426px){
+    .profile-container{
+        flex-direction: column;
+        
+    }
+    .edit-button .edit-btn{
+        font-size: 16px;
+        height: 35px;
+    }
+    .save-button .save-btn{
+        font-size: 16px;
+        height: 35px;
+    }
+    .profile-container tbody{
+        font-size: 15px;
+    }
+    .profile-container tbody tr{
+        width: 100%;
+    }
+    .profile-container .vertical-line{
+        display: none;
+    }
+    .profile-container .details-leftside{
+        overflow: visible;
+        margin-left: -10px;
+        
+    }
+    .profile-container .details-leftside .profile-table-left{
+        margin-left: 0px;
+        padding-right: 50px;
+        
+    }
+    .profile-container .details-rightside{
+        overflow: visible;
+        margin-left: -10px;
+    }
+    .profile-container .details-rightside .profile-table-right{
+        margin-left: 0px;
+    }
+}
+/* mobile width 320---321 given to view in inspect */
+@media only screen and (max-width:321px){
+    .profile-container{
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .edit-button{
+        margin-top: 30px;
+    }
+    .edit-button .edit-btn{
+        font-size: 15px;
+        height: 30px;
+    }
+    .save-button .save-btn{
+        font-size: 15px;
+        height: 30px;
+    }
+    .profile-container tbody{
+        font-size: 13px;
+    }
+    .profile-container tbody tr{
+        width: 100%;
+    }
+    .profile-container .vertical-line{
+        display: none;
+    }
+    .profile-container .details-leftside{
+        overflow: visible;
+        margin-left: -20px;
+        
+    }
+    .profile-container .details-leftside .profile-table-left{
+        margin-left: 0px;
+        padding-right: 50px;
+        
+    }
+    .profile-container .details-rightside{
+        overflow: visible;
+        margin-left: -20px;
+    }
+    .profile-container .details-rightside .profile-table-right{
+        margin-left: 0px;
+    }
+    #newPassword, #confirmPassword, #currentPassword{
+        height: 25px;
+        width: 100%;
+    }
+}
+/* --------------------------------ADD USER-------------------------------- */
+.back-button{
+    margin-top: 30px;
+}
+.back-button .back-btn{
+    position: relative;
+    overflow: hidden;
+    height: 50px;
+    margin-right: 15px;
+    font-size: 22px;
+    font-weight: 500;
+    background-color: #002438;
+    border-radius: 25px;
+    padding: 0px 35px;
+    border-width: 0px;
+    border-color: transparent;
+    box-shadow: hsl(10, 0%, 6%) 5px 3px 15px -8px;
+    
+}
+.back-button .back-btn:after{
+    content: "";
+    background: #ffffff;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    border-radius: 50%;
+    padding-left: 250%;
+    margin-left: -70px!important;
+    margin-top: -100%;
+    opacity: 0;
+    transition: all 0.8s
+}
+.back-button .back-btn:active:after{
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+.add-user-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    box-shadow: 7px 10px 10px -10px;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    height: fit-content;
+    box-shadow: 7px 10px 10px -10px;
+    border-radius: 20px;
+    background-color: #002438;
+    overflow: hidden;
+}
+.add-user-save-button{
+    margin-top: 20px;
+    float: right;
+    margin-right: -10px;
+}
+.add-user-save-button .add-user-save-btn{
+    position: relative;
+    overflow: hidden;
+    height: 50px;
+    margin-right: 15px;
+    font-size: 22px;
+    font-weight: 500;
+    background-color: #002438;
+    border-radius: 25px;
+    padding: 0px 35px;
+    border-width: 0px;
+    border-color: transparent;
+    box-shadow: hsl(10, 0%, 6%) 5px 3px 15px -8px;
+    
+}
+.add-user-save-button .add-user-save-btn:after{
+    content: "";
+    background: #ffffff;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    border-radius: 50%;
+    padding-left: 250%;
+    margin-left: -70px!important;
+    margin-top: -100%;
+    opacity: 0;
+    transition: all 0.8s
+}
+.add-user-save-button .add-user-save-btn:active:after{
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+/* -------- */
+.add-user-reset-button{
+    margin-top: 20px;
+    float: right;
+    margin-right: -10px;
+}
+.add-user-reset-button .add-user-reset-btn{
+    position: relative;
+    overflow: hidden;
+    height: 50px;
+    margin-right: 15px;
+    font-size: 22px;
+    font-weight: 500;
+    background-color: #002438;
+    border-radius: 25px;
+    padding: 0px 35px;
+    border-width: 0px;
+    border-color: transparent;
+    box-shadow: hsl(10, 0%, 6%) 5px 3px 15px -8px;
+    
+}
+.add-user-reset-button .add-user-reset-btn:after{
+    content: "";
+    background: #ffffff;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    border-radius: 50%;
+    padding-left: 250%;
+    margin-left: -70px!important;
+    margin-top: -100%;
+    opacity: 0;
+    transition: all 0.8s
+}
+.add-user-reset-button .add-user-reset-btn:active:after{
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+/* ----- */
+.add-user-saveAsDraft-button{
+    margin-top: 20px;
+    float: right;
+    margin-right: -10px;
+}
+.add-user-saveAsDraft-button .add-user-saveAsDraft-btn{
+    position: relative;
+    overflow: hidden;
+    height: 50px;
+    margin-right: 15px;
+    font-size: 22px;
+    font-weight: 500;
+    background-color: #002438;
+    border-radius: 25px;
+    padding: 0px 35px;
+    border-width: 0px;
+    border-color: transparent;
+    box-shadow: hsl(10, 0%, 6%) 5px 3px 15px -8px;
+    
+}
+.add-user-saveAsDraft-button .add-user-saveAsDraft-btn:after{
+    content: "";
+    background: #ffffff;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    border-radius: 50%;
+    padding-left: 250%;
+    margin-left: -70px!important;
+    margin-top: -100%;
+    opacity: 0;
+    transition: all 0.8s
+}
+.add-user-saveAsDraft-button .add-user-saveAsDraft-btn:active:after{
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+.add-user-container{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 20px;
+    gap: 10px;
+}
+.add-user-container .form-top{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+.add-user-container .form-bottom{
+    width: 100%;
+    
+}
+
+.add-user-container .form-top-left{
+    width: 80%;
+}
+.add-user-container .form-top-right{
+    margin-left: 10px;
+    width: 20%;
+    background-color: white;
+    border-radius: 20px;
+}
+.add-user-container .top1{
+    display: flex;
+    gap: 50px;
+}
+.add-user-container .top2{
+    margin-top: 10px;
+    width: 100%;
+}
+.add-user-container .top3{
+    margin-top: 10px;
+    display: flex;
+    gap: 50px;
+}
+.add-user-container .top4{
+    margin-top: 10px;
+    display: flex;
+    gap: 50px;
+}
+
+.customer-name{
+    flex-grow: 1;
+    
+}
+.customer-id{
+    flex-grow: 1;
+}
+/* .c-address{
+    
+} */
+.c-vehicle-no{
+    flex-grow: 1;
+}
+.c-vehicle-class{
+    /* flex-grow: 1; */
+    width: 20%;
+    padding: 0px;
+    /* padding-left: 5px; */
+    border-width: 2px;
+    margin: 0px;
+}
+/* .c-vehicle-class label{
+    margin: 0px !important;
+} */
+.c-vehicle-type{
+    /* flex-grow: 1; */
+    width: 80%;
+}
+.c-expiry-date{
+    /* flex-grow: 1; */
+    width: 20%;
+}
+#cName{
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    border-color: transparent;
+}
+#cID{
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    border-color: transparent;
+}
+#cAddress{
+    border-radius: 5px;
+    width: 100%;
+    max-height: 100px;
+    min-height: 100px;
+    border-color: transparent;
+}
+#cVehicleNo{
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    border-color: transparent;
+}
+#cVehicleCls{
+    padding: 0px;
+    padding-left: 5px;
+    margin: 0px !important;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    border-color: transparent;
+}
+#cVehicleTyp{
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    border-color: transparent;
+}
+#cExpDate{
+    font-size: 15px;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    border-color: transparent;
+}
+
+#photoUpload{
+    opacity: 0.0;
+
+   /* IE 8 */
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+
+   /* IE 5-7 */
+   filter: alpha(opacity=0);
+ 
+   /* Netscape or and older firefox browsers */
+   -moz-opacity: 0.0;
+
+   /* older Safari browsers */
+   -khtml-opacity: 0.0;
+    width: 100%;
+    height: 100%;
+}
+.dashed-line:hover{
+    background-color: rgb(233, 233, 233);
+    border-radius: 100%;
+    
+}
+.form-top-right{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+}
+.form-top-right .plus-icon{
+    position: relative;   
+    top: 8px;
+    left: -3px;
+}
+.form-top-right .plus-icon .line1{
+    width: 30px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: #fff;
+    position: relative;
+    transform: translate(10%, 10%);
+}
+.form-top-right .plus-icon .line2{
+    width: 30px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: #fff;
+    position: relative;
+    transform: translate(10%, -80%) rotate(90deg);
+}        
+.form-top-right .plus-bg{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #002438;
+    top: 30%;
+    left: 38%;
+    margin-right: 50%;
+}
+.form-top-right .dashed-line{
+    height: 80%;
+    position: relative;
+    width: 80%;
+    top: 10%;
+    left: 10%;
+    border-radius: 20px;
+    border-color: #002438;
+    border-style: dashed;
+    overflow: hidden;
+}
+.add-user-container .botm1{
+    /* margin-top: 10px; */
+    display: flex;
+    gap: 50px;
+    width: 100%;
+}
+.add-user-container .botm2{
+    margin-top: 10px;
+    display: flex;
+    gap: 50px;
+    width: 100%;
+}
+.add-user-container .botm3{
+    margin-top: 10px;
+    display: flex;
+    gap: 50px;
+    width: 100%;
+}
+.c-existing-insurer{
+    /* flex-grow: 1; */
+    width: 40%;
+}
+.c-present-policy-num{
+    /* flex-grow: 1; */
+    width: 60%;
+}
+.c-insured-declared-value{
+    width: 60%;
+}
+.c-make-and-model{
+    width: 40%;
+}
+.c-insured-declared-value{
+    width: 60%;
+}
+.c-sub-container {
+    width: 40%;
+}
+.c-phone-number{
+    width: 100%;
+}
+.c-status{
+    width: 100%;
+}
+
+.c-remarks{
+    width: 60%;
+}
+
+#cExistInsurer{
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    border-color: transparent;
+}
+#cPPN{
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    border-color: transparent;
+}
+#cMakeModel{
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    border-color: transparent;
+}
+#cIDV{
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    border-color: transparent;
+}
+#cPhoneNo{
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    border-color: transparent;
+}
+#cStatus{
+    /* border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    border-color: transparent; */
+    
+    padding: 0px;
+    padding-left: 5px;
+    margin: 0px !important;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    border-color: transparent;
+
+}
+#cRemarks{
+    border-radius: 5px;
+    width: 100%;
+    min-height: 100px;
+    max-height: 100px;
+    border-color: transparent;
+}

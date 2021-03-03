@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lead Manager</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="test.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+  <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" data-auto-replace-svg="nest"></script>
+  
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.load('current', {packages:['bar']});
+    google.charts.setOnLoadCallback(intrChart);
+    google.charts.setOnLoadCallback(inspChart);
+    google.charts.setOnLoadCallback(leadChart);
+    google.charts.setOnLoadCallback(pieChart);
+
+      function pieChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Company', 'Customers'],
+          ['LIC', 11],
+          ['STAR', 2],
+          ['APPOLLO', 2],
+          ['UNIVERSAL', 2],
+          
+        ]);
+
+        var options = {
+          // title: 'My Daily Activities'
+          backgroundColor: 'transparent',
+          legend: {textStyle:{color: '#FFF'}}
+          
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    function intrChart() {
+        var data = new google.visualization.arrayToDataTable([
+          ['Opening Move', 'Percentage'],
+          ["LIFE", 100,],
+          ["CAR", 31],
+          ["HEALTH", 12],
+          ["HOME", 10],
+         
+        ]);
+
+        var options = {
+          title: '',
+          
+          legend: { position: 'none' },
+          chart: { title: '',
+                   subtitle: '' },
+          bars: 'vertical', // Required for Material Bar Charts.
+          axes: {
+            x: {
+              0: { side: 'bottom', label: 'POLICY TYPE'} // Top x-axis.
+            }
+          },
+          bar: { groupWidth: "50%"},
+          
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('intr-chart'));
+        chart.draw(data, options);
+      };
+    function leadChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Element", "Density", { role: "style" } ],
+        ["LIC", 15.94, "#BCFFFF"],
+        ["STAR", 20.49, "#FFC9C9"],
+        ["UNIVERSAL", 10.30, "#F9FFD3"],
+        ["APPOLLO", 21.45, "#C2FFBD"]
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 0,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "",
+        bar: {groupWidth: "70%"},
+        backgroundColor: 'transparent',
+        legend: { position: "none"},
+        hAxis: {textStyle:{color: '#FFF'}},
+        vAxis: {textStyle:{opacity: '0'}},
+        
+      };
+      var chart = new google.visualization.BarChart(document.getElementById("lead-chart"));
+      chart.draw(view, options);
+    }
+    
+    function inspChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Element", "Density", { role: "style" } ],
+        ["LIC", 8.94, "#BCFFFF"],
+        ["STAR", 10.49, "#FFC9C9"],
+        ["UNIVERSAL", 19.30, "#F9FFD3"],
+        ["APPOLLO", 21.45, "#C2FFBD"]
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0,1,
+                       { calc: "stringify",
+                         sourceColumn: 0,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "",
+        bar: {groupWidth: "70%"},
+        backgroundColor: 'transparent',
+        legend: { position: "none"},
+        hAxis: {textStyle:{color: '#FFF'}},
+        vAxis: {textStyle:{opacity: '0'}},
+      };
+      var chart = new google.visualization.BarChart(document.getElementById("insp-chart"));
+      chart.draw(view, options);
+    }
+  </script>
+    
+</head>
+<body>
+  <div class="wrapper">  
+    <input type="checkbox" id="check"> <!-- Checkbox ID name-->
+    <label for="check">
+      <i class="fas fa-bars" id="hamburger-bars"></i>
+      <i class="fas fa-times" id="hamburger-cancel"></i>
+    </label>    
+    <nav class="sidebar">
+      <header>LEAD <br><span>MANAGER</span></header>
+
+      <ul>
+          <li><a href="index.html">DASHBOARD</a></li>
+          <li>
+              <a href="#" class="user-btn">USERS
+                  <span class="fas fa-caret-right user-arrow-icon"></span>
+              </a>
+              <ul class="user-submenus">
+                  <li>
+                      <a href="user-vehicle.html" class="submenu-btn vehicle" >VEHICLE</a>
+                  </li>
+                  <li>
+                    <a href="user-health.html" class="submenu-btn health" >HEALTH</a>
+                  </li>
+                  <li>
+                    <a href="user-fire.html" class="submenu-btn fire" >FIRE</a>
+                  </li>
+              </ul>
+          </li>
+          
+          <li><a href="my-tasks.html">MY TASKS</a></li>
+          <li class="active"><a href="reports.html">REPORTS</a></li>
+          <li><a href="sms.html">SMS</a></li>
+          <li><a href="profile.html">PROFILE</a></li>
+          <li><a href="login.html">LOGOUT</a></li>
+      </ul>
+      <img id="sidebarDesign" src="/images/curve.png" alt="">
+    </nav>
+
+                  
+    <div class="page-content-wrapper">
+      <div class="container reports">
+        <h1>REPORTS</h1>
+        <form class="form-inline report-filter">
+          <label class="my-1 mr-2 " for="reportFilter">Filter the report</label>
+          <select class="custom-select my-1 mr-sm-2 " id="reportFilter">
+            <option selected>Select filter type</option>
+            <option value="1">Insurance Type</option>
+            <option value="2">Class Type</option>
+            <option value="2">Status</option>
+            <option value="2">Custom Date</option>
+          </select>
+        </form>
+        <div class="row graph-row1">
+          <div class="col-sm graph-r1-c1">
+              <h4>INSURANCE SERVICE <br>PROVIDER REPORT</h4>
+              <!-- <div class="date-filter">TODAY <img src="icons/arrow.png" alt=""></div> -->
+              <div class="date-filter">
+                <button class="btn btn-secondary dropdown-toggle" style="font-weight: 500;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  TODAY  
+                </button>
+                <div class="dropdown-menu drop-down" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item droppedItem" href="#" style="color: white;">THIS WEEK</a>
+                  <a class="dropdown-item droppedItem" href="#" style="color: white;">LAST 28 DAYS</a>
+                </div>
+                
+              </div>
+              <div class="com-sm graph-col-1">
+                <div id="insp-chart" style=" height: 100%;"></div>
+              </div>
+          </div>
+          <div class="col-sm graph-r1-c2">
+              <h4>INSURANCE<br>TYPE REPORT</h4>
+              <!-- <div class="date-filter">TODAY <img src="icons/arrow.png" alt=""></div> -->
+              <div class="date-filter">
+                <button class="btn btn-secondary dropdown-toggle" style="font-weight: 500;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  TODAY  
+                </button>
+                <div class="dropdown-menu drop-down" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item droppedItem" href="#" style="color: white;">THIS WEEK</a>
+                  <a class="dropdown-item droppedItem" href="#" style="color: white;">LAST 28 DAYS</a>
+                </div>
+                
+              </div>
+              <div class="com-sm graph-col-2">
+                <div id="intr-chart" style=" width: 85%; height: 75%;"></div>
+              </div>
+          </div>
+          <div class="col-sm graph-r1-c3">
+              <h4>LEADS REPORT</h4>
+              <!-- <div class="date-filter">TODAY <img src="icons/arrow.png" alt=""></div> -->
+              <div class="date-filter">
+                <button class="btn btn-secondary dropdown-toggle" style="font-weight: 500;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  TODAY  
+                </button>
+                <div class="dropdown-menu drop-down" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item droppedItem" href="#" style="color: white;">THIS WEEK</a>
+                  <a class="dropdown-item droppedItem" href="#" style="color: white;">LAST 28 DAYS</a>
+                </div>
+                
+              </div>
+              <div class="com-sm graph-col-3">
+                <div id="lead-chart" style=" height: 100%;"></div>
+              </div>
+          </div>
+        </div>
+        <div class="row graph-row2">
+          <div class="com-sm graph-row-2">
+            <!-- <div class="date-filter">TODAY <img src="icons/arrow.png" alt=""></div> -->
+            <div class="date-filter">
+              <button class="btn btn-secondary dropdown-toggle" style="font-weight: 500;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                TODAY  
+              </button>
+              <div class="dropdown-menu drop-down" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item droppedItem" href="#" style="color: white;">THIS WEEK</a>
+                <a class="dropdown-item droppedItem" href="#" style="color: white;">LAST 28 DAYS</a>
+              </div>
+              
+            </div>
+            <div id="piechart" style=" height: 100%;"></div>
+            <div class="vline"></div>
+            <div class="row-2-list">
+              <h4>NEW CUSTOMERS TODAY (PERCENTAGE)</h4>
+              <table class="table table-borderless pie-table">
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>LIC</td>
+                    <td>:</td>
+                    <td>64.7</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>APPOLLO</td>
+                    <td>:</td>
+                    <td>11.8</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>STAR</td>
+                    <td>:</td>
+                    <td>11.8</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>UNIVERSAL</td>
+                    <td>:</td>
+                    <td>11.8</td>
+                  </tr>
+                  
+                </tbody>  
+              </table>
+            </div>
+          </div>
+            
+
+        </div>
+      </div>
+          
+    </div>
+  </div>            
+           
+                
+  <script>
+    $('.user-btn').click(function(){
+          $('nav ul .user-submenus').toggleClass("show-user-sub-menu");
+          $('nav ul .user-arrow-icon').toggleClass("rotate");
+      });
+
+  </script>
+</body>
+</html>

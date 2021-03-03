@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Manager</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="test.css"> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <div class="wrapper">  
+        
+        <input type="checkbox" id="check"> <!-- Checkbox ID name-->
+        <label for="check">
+        <i class="fas fa-bars" id="hamburger-bars"></i>
+        <i class="fas fa-times" id="hamburger-cancel"></i>
+        </label> 
+        <nav class="sidebar">
+        <header>LEAD <br><span>MANAGER</span></header>
+
+        <ul>
+            <li><a href="index.html">DASHBOARD</a></li>
+            <li class="active">
+                <a href="#" class="user-btn">USERS
+                    <span class="fas fa-caret-right user-arrow-icon"></span>
+                </a>
+                <ul class="user-submenus">
+                    <li>
+                        <a href="user-vehicle.html" class="submenu-btn vehicle" >VEHICLE</a>
+                    </li>
+                    <li>
+                        <a href="user-health.html" class="submenu-btn health" >HEALTH</a>
+                    </li>
+                    <li>
+                        <a href="user-fire.html" class="submenu-btn fire" >FIRE</a>
+                    </li>
+                </ul>
+            </li>
+            
+            <li><a href="my-tasks.html">MY TASKS</a></li>
+            <li><a href="reports.html">REPORTS</a></li>
+            <li><a href="sms.html">SMS</a></li>
+            <li><a href="profile.html">PROFILE</a></li>
+            <li><a href="login.html">LOGOUT</a></li>
+        </ul>
+        <img id="sidebarDesign" src="/images/curve.png" alt="">
+        </nav>
+                    
+        <div class="page-content-wrapper">
+            <div class="container">
+                <h1>ADD MY TASK</h1>
+                <div class="back-button">
+                <a href="index.html"><button type="button" class="back-btn btn btn-primary">BACK</button></a>
+                </div>
+                <div class="add-user-container">
+                    <div class="form-top">
+                        <div class="form-top-left">
+                            <div class="top1">
+                                <div class="customer-name">
+                                    <form>
+                                        <label for="cName">Customer Name:</label>
+                                        <input type="text" id="cName" name="cName">
+                                    </form>
+                                    
+                                </div>
+                                <div class="customer-id">
+                                    <form>
+                                        <label for="cID">Customer ID:</label>
+                                        <input type="text" id="cID" name="cID">
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="top2">
+                                <div class="c-address">
+                                    <form>
+                                        <label for="cAddress">Address:</label>
+                                        <textarea id = "cAddress"></textarea>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="top3">
+                                <div class="c-vehicle-no">
+                                    <form>
+                                        <label for="cVehicleNo">Vehicle Number:</label>
+                                        <input type="text" id="cVehicleNo" name="cVehicleNo">
+                                    </form>
+                                </div>
+                                <!-- <div class="c-vehicle-class">
+                                    <form>
+                                        <label for="cVehicleCls">Vehicle Class:</label>
+                                        <input type="text" id="cVehicleCls" name="cVehicleCls">
+                                    </form>
+                                </div> -->
+                                <form class="form-inline c-vehicle-class">
+                                    <label class="my-1 mr-2 " for="cVehicleCls">Vehicle Class</label>
+                                    <select class="custom-select my-1 mr-sm-2 " id="cVehicleCls">
+                                    <option selected>Select a class</option>
+                                    <option value="1">Private Car</option>
+                                    <option value="2">Two Wheeler</option>
+                                    <option value="3">Auto Rickshaw</option>
+                                    <option value="4">Goods Pickup</option>
+                                    <option value="5">Tipper/Lorry</option>
+                                    <option value="6">JCB/Tractor/Crane</option>
+                                    <option value="7">School Bus</option>
+                                    <option value="8">Taxi Cab</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="top4">
+                                <div class="c-vehicle-type">
+                                    <form>
+                                        <label for="cVehicleTyp">Type of vehicle:</label>
+                                        <input type="text" id="cVehicleTyp" name="cVehicleTyp">
+                                    </form>
+                                </div>
+                                
+                                <div class="c-expiry-date">
+                                    <form>
+                                        <label for="cExpDate">Expiry Date:</label>
+                                        <input type="date" id="cExpDate" name="cExpDate">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-top-right">
+                            <div class="dashed-line">
+                                
+                                <div class="plus-bg">
+                                    <div class="plus-icon"><div class="line1"></div><div class="line2"></div></div>
+                                </div>
+                                <input type="file" id="photoUpload" />
+                            </div>
+                            <p style="color: #002438; font-weight: 500;">Upload Photo</p>
+                        </div>
+                    </div>
+                    <div class="form-bottom">
+                        <div class="botm1">
+                            <div class="c-existing-insurer">
+                                <form>
+                                    <label for="cExistInsurer">Existing Insurer:</label>
+                                    <input type="text" id="cExistInsurer" name="cExistInsurer">
+                                </form>
+                            </div>
+                            <div class="c-present-policy-num">
+                                <form>
+                                    <label for="cPPN">Present Policy Number:</label>
+                                    <input type="text" id="cPPN" name="cPPN">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="botm2">
+                            <div class="c-make-and-model">
+                                <form>
+                                    <label for="cMakeModel">Make and Model:</label>
+                                    <input type="text" id="cMakeModel" name="cMakeModel">
+                                </form>
+                            </div>
+                            <div class="c-insured-declared-value">
+                                <form>
+                                    <label for="cIDV">Insured Declared value:</label>
+                                    <input type="text" id="cIDV" name="cIDV">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="botm3">
+                            <div class="c-sub-container">
+                                <div class="c-phone-number">
+                                    <form >
+                                        <label for="cPhoneNo">Phone Number:</label>
+                                        <input type="text" id="cPhoneNo" name="cPhoneNo">
+                                    </form>
+                                </div>
+                                <form class="form-inline c-status">
+                                    <label class="my-1 mr-2 " for="cStatus">Status</label>
+                                    <select class="custom-select my-1 mr-sm-2 " id="cStatus">
+                                    <option selected>Select status</option>
+                                    <option value="1">Expired</option>
+                                    <option value="2">Renewed</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="c-remarks form-group">
+                                <label for="cRemarks">Remarks</label>
+                                <textarea class="form-control" id="cRemarks" rows="5" placeholder="Type your remarks here..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-user-save-button">
+                <button type="button" class="add-user-save-btn btn btn-primary">SAVE</button>
+                </div>
+                <div class="add-user-reset-button">
+                    <button type="button" class="add-user-reset-btn btn btn-primary">RESET</button>
+                </div>
+                <div class="add-user-saveAsDraft-button">
+                    <button type="button" class="add-user-saveAsDraft-btn btn btn-primary">SAVE AS DRAFT</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>            
+           
+                
+    <script>
+    $('.user-btn').click(function(){
+        $('nav ul .user-submenus').toggleClass("show-user-sub-menu");
+        $('nav ul .user-arrow-icon').toggleClass("rotate");
+    });
+  </script>  
+    
+</body>
+</html>
