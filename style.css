@@ -1482,33 +1482,72 @@ table{
 /* //////////////////////////////////////////--Reports Page--///////////////////////////////////////////////////*/
 
 
+.container.reports h1{
+    margin-bottom: 30px;
+}
 
+.reports .report-filter-row{
+    display: flex;
+    
+    width: 100%;
+    gap: 10px;
+    margin-top: 50px;
+    align-content: flex-start;
+    margin-bottom: 10px;
 
-.reports .report-filter{
+}
+.reports .report-filter-row .report-filter{
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-left: 50px;
-    margin-right: 60px;
-    align-content: flex-start;
-
 }
-.reports .report-filter label{
+
+.reports .report-filter-row label{
     align-self: flex-start;
 }
-.reports .report-filter .custom-select{
-    border-radius: 10px;
-}
-#reportFilter{
-    width: 20%;
+.reports .report-filter-row .custom-select-filter{
     border-radius: 20px;
+    width: 100%;
+}
+.reports .custom-select-filter{
+    outline: none;
+    width: 100%;
+    border-radius: 20px;
+    padding-left: 5px;
     /* background-color: #53b9f0; */
     /* color: white; */
     border-color: #002438;
     margin-right: 60px;
 }
+.reports .custom-select-filter:hover{
+    border-color: #25b3ff2f;
+    background-color: #25b3ff2f;
+}
+/* datepicker separate adjustment */
+.reports .custom-select-filter.date{
+    border-width: 1px;
+    width: 100%;
+    position: relative;
+    top: 4px;
+    margin-right: 0px;
+}
+/* submit button */
+.reports .custom-select-filter.submit{
+    border-width: 1px;
+    width: 100%;
+    position: relative;
+    background-color: #002438;
+    border-color: #002438;
+    color: white;
+    top: 35px;
+    transition: background .3s;
+}
+.reports .custom-select-filter.submit:hover{
+    border-color: #05699c;
+    background-color: #05699e;
+}
 .graph-row1{
-    margin-top: 30px;
+    /* margin-top: 30px; */
     width: 100%;
     align-items: flex-end;
     margin-left: 40px;
@@ -1621,6 +1660,7 @@ table{
 .graph-row1 .graph-r1-c3 h4{
     padding-top: 22px;
 }
+/* //////////PIECHART BELOW////////// */
 .graph-row2{
     display: flex;
     flex-direction: column;
@@ -1737,7 +1777,11 @@ table{
 
     color: #002438 !important;
 }
-
+/* report filters */
+.report-filter-row{
+    display: flex;
+    width: 100%;
+}
 
 /* -------REPORT responsive -------*/
 
@@ -1746,7 +1790,7 @@ table{
     .reports .report-filter{
         margin-left: 0px;
     }
-    #reportFilter{
+    .reports .custom-select-filter{
         height: 35px;
     }
     .row{
@@ -1792,19 +1836,99 @@ table{
         margin-bottom: 100px;
     }
     .graph-row-2 .vline{
-        height: 250px!important;
+        height: 230px!important;
     }
     /* child div row 2 */
     .graph-row2 .graph-row-2{
         height: fit-content;
         /* align-items: center; */
+        width: 99%;
+        margin-left: 15px;
         
     }
     .graph-row2 .graph-row-2 .row-2-list h4,
     .graph-row2 .graph-row-2 .row-2-list tbody{
         font-size: 15px;
     }
+    #piechart{
+        margin-top: 40px!important;
+    }
 }
+@media only screen and (max-width:1224px){
+    .reports .report-filter{
+        margin-left: 0px;
+    }
+    
+    .row{
+        padding-left: 0px;
+        width: 100%;
+        
+    }
+    .graph-row1{
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 10px;
+    }
+    /* .graph-row2{
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 10px;
+    } */
+    .col-sm.graph-r1-c1, .col-sm.graph-r1-c2, .col-sm.graph-r1-c3{
+        width: 33.33vw;
+        margin-right: 0px;
+    } 
+    /* graph title */
+    .graph-r1-c1 h4, .graph-r1-c2 h4, .graph-r1-c3 h4{
+        font-size: 15px;
+    }
+    /* adjusting r1-c1 graph w.r.t other r1 graphs */
+    .graph-r1-c3 h4{
+        padding-bottom: 4px;
+    }
+    .graph-row1 .graph-r1-c2 .graph-col-2 #intr-chart{
+        border-radius: 5px;
+        left: 20px;
+        align-content: center;
+    }
+    .graph-row1 .date-filter button{
+        position: relative;
+        top: -15px;
+    }
+    /* parent div row 2 -old pie chart section */
+    /* .graph-row2{
+        height: fit-content;
+        padding-bottom: 15px;
+        margin-bottom: 100px;
+    }
+    .graph-row-2 .vline{
+        height: 250px!important;
+    } */
+    /* child div row 2 */
+    /* .graph-row2 .graph-row-2{
+        height: fit-content;
+        /* align-items: center; 
+        
+    } */
+    /* .graph-row2 .graph-row-2 .row-2-list h4,
+    .graph-row2 .graph-row-2 .row-2-list tbody{
+        font-size: 15px;
+    }
+    #piechart{
+        margin-top: 40px!important;
+    } */
+    .report-filter-row .custom-select-filter.date{
+        font-size: 14px;
+    }
+}
+/* for tablets */
+
+@media only screen and (max-width:769px){
+    
+}
+
+
+
 /*///////////////////////////////////----SMS PAGE----///////////////////////////////////*/
 
 .sms-container{

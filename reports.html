@@ -26,34 +26,34 @@
     google.charts.setOnLoadCallback(intrChart);
     google.charts.setOnLoadCallback(inspChart);
     google.charts.setOnLoadCallback(leadChart);
-    google.charts.setOnLoadCallback(pieChart);
+    // google.charts.setOnLoadCallback(pieChart);
 
-      function pieChart() {
+      // function pieChart() {
 
-        var data = google.visualization.arrayToDataTable([
-          ['Company', 'Customers'],
-          ['LIC', 11],
-          ['STAR', 2],
-          ['APPOLLO', 2],
-          ['UNIVERSAL', 2],
+      //   var data = google.visualization.arrayToDataTable([
+      //     ['Company', 'Customers'],
+      //     ['LIC', 11],
+      //     ['STAR', 2],
+      //     ['APPOLLO', 2],
+      //     ['UNIVERSAL', 2],
           
-        ]);
+      //   ]);
 
-        var options = {
+      //   var options = {
           
-          // title: 'My Daily Activities'
-          backgroundColor: 'transparent',
-          legend: {textStyle:
-            {color: '#FFF'}}
+      //     // title: 'My Daily Activities'
+      //     backgroundColor: 'transparent',
+      //     legend: {textStyle:
+      //       {color: '#FFF'}}
           
           
           
-        };
+      //   };
 
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+      //   var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
-        chart.draw(data, options);
-      }
+      //   chart.draw(data, options);
+      // }
     function intrChart() {
         var data = new google.visualization.arrayToDataTable([
           ['Opening Move', 'Percentage'],
@@ -186,16 +186,53 @@
     <div class="page-content-wrapper">
       <div class="container reports">
         <h1>REPORTS</h1>
-        <form class="form-inline report-filter">
-          <label class="my-1 mr-2 " for="reportFilter">Filter the report</label>
-          <select class="custom-select my-1 mr-sm-2 " id="reportFilter">
-            <option selected>Select filter type</option>
-            <option value="1">Insurance Type</option>
-            <option value="2">Class Type</option>
-            <option value="2">Status</option>
-            <option value="2">Custom Date</option>
-          </select>
-        </form>
+        <div class="report-filter-row">
+          <form class="form-inline report-filter">
+            <label class="my-1 mr-2 " for="custom-select-filter">Insurance type</label>
+            <select class="custom-select-filter my-1 mr-sm-2 ">
+              <option selected>Select</option>
+              <option value="1">Health</option>
+              <option value="2">Vehicle</option>
+              <option value="2">Fire</option>
+             
+            </select>
+          </form>
+          <form class="form-inline report-filter">
+            <label class="my-1 mr-2 " for="custom-select-filter">Customer type</label>
+            <select class="custom-select-filter my-1 mr-sm-2 ">
+              <option selected>Select</option>
+              <option value="1">Customer</option>
+              <option value="2">Lead</option>
+              
+            </select>
+          </form>
+          <form class="form-inline report-filter">
+            <label class="my-1 mr-2 " for="custom-select-filter">Provider</label>
+            <select class="custom-select-filter my-1 mr-sm-2 ">
+              <option selected>Select</option>
+              <option value="1">LIC</option>
+              <option value="2">Appollo</option>
+              <option value="2">Universal</option>
+              <option value="2">Star</option>
+            </select>
+          </form>
+          <form class="form-inline report-filter">
+            <label class="my-1 mr-2 " for="custom-select-filter">Status</label>
+            <select class="custom-select-filter my-1 mr-sm-2 ">
+              <option selected>Select</option>
+              <option value="1">Expired</option>
+              <option value="2">Renewed</option>
+            </select>
+          </form>
+          <form class= "report-filter">
+            <label for="custom-select-filter">Date</label>
+            <input type="date" class="custom-select-filter date">
+          </form> 
+          <form class="report-filter" action="filtered-report.html">
+            <input type="submit" class="custom-select-filter submit">
+          </form>   
+
+        </div>
         <div class="row graph-row1">
           <div class="col-sm graph-r1-c1">
               <h4>INSURANCE SERVICE <br>PROVIDER REPORT</h4>
@@ -249,9 +286,10 @@
               </div>
           </div>
         </div>
-        <div class="row graph-row2">
+        
+        <!-- <div class="row graph-row2">
           <div class="com-sm graph-row-2">
-            <!-- <div class="date-filter">TODAY <img src="icons/arrow.png" alt=""></div> -->
+            
             <div class="date-filter">
               <button class="btn btn-secondary dropdown-toggle" style="font-weight: 500;" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 TODAY  
@@ -299,7 +337,7 @@
           </div>
             
 
-        </div>
+        </div> -->
       </div>
           
     </div>
