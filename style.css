@@ -1496,6 +1496,14 @@ table{
     margin-bottom: 10px;
 
 }
+.reports .report-filter-row div{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-top: 50px;
+    align-content: flex-start;
+    margin-bottom: 10px;
+}
 .reports .report-filter-row .report-filter{
     display: flex;
     flex-direction: column;
@@ -1537,13 +1545,11 @@ table{
     width: 100%;
     position: relative;
     background-color: #002438;
-    border-color: #002438;
     color: white;
     top: 35px;
     transition: background .3s;
 }
 .reports .custom-select-filter.submit:hover{
-    border-color: #05699c;
     background-color: #05699e;
 }
 .graph-row1{
@@ -1924,9 +1930,34 @@ table{
 /* for tablets */
 
 @media only screen and (max-width:769px){
+    .report-filter-row{
+        flex-direction: column;
+    }
+    .report-filter-row div{
+        margin-top: 0px!important;
+    }
     
+@media only screen and (max-width:376px){
+    .report-filter-row{
+        flex-direction: row;
+    }
+    .report-filter-row div{
+        flex-direction: column;
+    }
+    .custom-select-filter.submit{
+        position: relative;
+        top: 41px!important;
+    }
+    .graph-row1{
+        flex-direction: column;
+    }
+    .col-sm.graph-r1-c1, .col-sm.graph-r1-c2, .col-sm.graph-r1-c3{
+        width: 100%;
+    }
+    #intr-chart{
+        width: 85%!important;
+    }
 }
-
 
 
 /*///////////////////////////////////----SMS PAGE----///////////////////////////////////*/
