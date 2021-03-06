@@ -2636,6 +2636,7 @@ table{
     border-color: transparent;
 }
 #cAddress{
+    padding-left: 10px;
     border-radius: 5px;
     width: 100%;
     max-height: 100px;
@@ -2841,4 +2842,79 @@ table{
     min-height: 100px;
     max-height: 100px;
     border-color: transparent;
+}
+/* laptop >> add user form pages<<*/
+@media only screen and (min-width:1224px){
+    /* back button */
+    .container .back-button .back-btn{
+        height: 35px;
+        padding: 0;
+        font-size: 15px;
+        padding: 0px 30px 0px
+    }
+    .container .back-button .back-btn:hover{
+        background-color: #00507a;
+    }
+    
+    /* save/reset/save as draft buttons */
+    .container .add-user-save-button,
+    .container .add-user-reset-button,
+    .container .add-user-saveAsDraft-button{
+        margin-top: 20px;  
+        margin-bottom: 30px;    
+    }
+    .container .add-user-save-button .add-user-save-btn,
+    .container .add-user-reset-button .add-user-reset-btn,
+    .container .add-user-saveAsDraft-button .add-user-saveAsDraft-btn{
+        height: 35px;
+        padding: 0;
+        font-size: 15px;
+        padding: 0px 30px 0px;
+          
+    }
+    .container .add-user-save-button .add-user-save-btn:hover,
+    .container .add-user-reset-button .add-user-reset-btn:hover,
+    .container .add-user-saveAsDraft-button .add-user-saveAsDraft-btn:hover{
+        background-color: #00507a;
+    }
+    .add-user-container label{
+        font-size: 15px;
+    }
+    .add-user-container input,
+    .add-user-container textarea{
+        font-size: 15px;
+    }
+    /* change input field height */
+    .add-user-container input,
+    .add-user-container .custom-select{
+        height: 27px!important;
+    }
+    .add-user-container .form-top-right{
+        border-radius: 15px;
+    }
+    .add-user-container .form-top-right .dashed-line{
+        height: 200px;
+        border-radius: 15px;
+    }
+    /* "upload Photo" text */
+    .add-user-container .form-top-right p{
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-bottom: 10px; */
+    }
+    /* main pic upload button */
+    .add-user-container .form-top-right .plus-bg{
+        width: 40px;
+        height: 40px;
+        top: 30%;
+    }
+    /* button lines */
+    .add-user-container .form-top-right .plus-icon .line1,
+    .add-user-container .form-top-right .plus-icon .line2{
+        height: 2px;
+        width: 25px;
+        top: -7px;
+    }
 }
