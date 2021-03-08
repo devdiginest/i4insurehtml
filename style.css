@@ -789,7 +789,7 @@ nav ul ul li a .submenu-arrow-vehicle.rotate,
     user-select: none;
     pointer-events: none;
 }
-@media only screen and (min-width: 1148px){
+@media only screen and (min-width: 1224px){
     .sidebar header{
         
         font-size: 40px;
@@ -840,6 +840,54 @@ nav ul ul li a .submenu-arrow-vehicle.rotate,
     }
 }
 @media only screen and (min-width:1025px){
+    .sidebar header{
+        
+        font-size: 40px;
+        margin-top: -20%;
+        padding-bottom: 10px;
+        border-bottom-left-radius: 200px;
+        border-bottom-right-radius: 200px;
+        
+    }
+    .sidebar header span{
+        position: relative;
+        font-size: 20px;
+        font-weight: 400;
+        top: -10px;
+    }
+    .sidebar{
+        /* top: 0px; added during new hamburger
+        to stop from showing top gap*/
+        width: 220px;
+    }
+    .sidebar ul{
+        margin-top: 30px;
+    }
+    nav ul li a{
+        font-size: 15px;
+        padding-left: 70px;
+        font-weight: 500;
+    }
+    /* sidebar submenu font settings */
+    nav ul ul li a{
+        font-size: 13px;
+        /* font-weight: 400; */
+    }
+    nav ul li{
+        line-height: 20px;
+    }
+    /*sidebar submenu line height  */
+    nav ul ul li{
+        line-height: 5px;
+    }
+    nav ul li a span{
+        font-size: 15px;
+    }
+    nav ul li.active > a{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        
+    }
     label #hamburger-bars, label #hamburger-cancel{
         display: none;
     }
@@ -890,6 +938,14 @@ nav ul ul li a .submenu-arrow-vehicle.rotate,
     .container{
         padding-right: 20px!important;
     }
+    .top0{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:1224px){
+    .page-content-wrapper{
+        margin-left: 220px;
+    }
 }
 @media only screen and (max-width:1025px){
     .page-content-wrapper{
@@ -928,6 +984,10 @@ nav ul ul li a .submenu-arrow-vehicle.rotate,
         width: 95%!important;
         margin: 0px!important;
     }
+    .form-top .top0{
+        flex-direction: column;
+        gap: 10px!important;
+    }
     .form-top .top1{
         flex-direction: column;
         gap: 10px!important;
@@ -937,7 +997,11 @@ nav ul ul li a .submenu-arrow-vehicle.rotate,
         gap: 10px!important;
 
     }
-    .form-top .top3 .c-vehicle-class{
+    .form-top .top3 .c-health-policy-type{
+        width: 100%!important;
+    }
+    .form-top .top3 .c-vehicle-class {
+   
         width: 100%!important;
     }
     .form-top .top4{
@@ -948,9 +1012,7 @@ nav ul ul li a .submenu-arrow-vehicle.rotate,
     .form-top .top4 .c-vehicle-type{
         width: 100%!important;
     }
-    .form-top .top4 .c-expiry-date{
-        width: 100%!important;
-    }
+    
     .form-bottom .botm1{
         flex-direction: column;
         gap: 10px!important;
@@ -2572,9 +2634,14 @@ table{
     background-color: white;
     border-radius: 20px;
 }
+.add-user-container .top0{
+    display: flex;
+    gap: 50px;
+}
 .add-user-container .top1{
     display: flex;
     gap: 50px;
+    margin-top: 10px;
 }
 .add-user-container .top2{
     margin-top: 10px;
@@ -2596,13 +2663,17 @@ table{
     
 }
 .customer-id{
-    flex-grow: 1;
+    width: 50%;
 }
 /* .c-address{
     
 } */
+.c-sum-insured{
+    width: 40%;
+}
 .c-vehicle-no{
-    flex-grow: 1;
+    /* flex-grow: 1; */
+    width: 40%;
 }
 .c-vehicle-class{
     /* flex-grow: 1; */
@@ -2621,29 +2692,64 @@ table{
 }
 .c-expiry-date{
     /* flex-grow: 1; */
-    width: 20%;
+    width: 60%;
 }
-#cName{
+.c-user-type .user-type-label{
+    position: relative;
+    top: -4px;
+}
+.cUserType{
+    padding: 0px;
+    padding-left: 5px;
+    margin: 0px !important;
+    border-radius: 5px;
+    height: 30px;
+    border-color: transparent;
+}
+.customer-name{
+    width: 50%;
+}
+.cName{
+    border-radius: 5px;
+    width: 50%;
+    height: 30px;
+    border-color: transparent;
+}
+.cID{
     border-radius: 5px;
     width: 100%;
     height: 30px;
     border-color: transparent;
 }
-#cID{
-    border-radius: 5px;
-    width: 100%;
-    height: 30px;
-    border-color: transparent;
-}
-#cAddress{
-    padding-left: 10px;
+.cAddress{
+    padding-left: 5px;
     border-radius: 5px;
     width: 100%;
     max-height: 100px;
     min-height: 100px;
     border-color: transparent;
 }
+#cSumInsured{
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    border-color: transparent;
+}
 #cVehicleNo{
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    border-color: transparent;
+}
+.c-health-policy-type{
+    width: 60%;
+}
+#cHealthPolicyType{
+    position: relative;
+    top: 2px;
+    padding: 0px;
+    padding-left: 5px;
+    margin: 0px !important;
     border-radius: 5px;
     width: 100%;
     height: 30px;
@@ -2658,13 +2764,34 @@ table{
     height: 30px;
     border-color: transparent;
 }
-#cVehicleTyp{
+.c-total-premium{
+    width: 40%;
+}
+.c-vehicle-type{
+    width: 40%;
+}
+#cTotalPremium{
     border-radius: 5px;
     width: 100%;
     height: 30px;
     border-color: transparent;
 }
-#cExpDate{
+#cVehicleType{
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    border-color: transparent;
+}
+.cCreatedDate{
+    font-size: 15px;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    border-color: transparent;
+}
+.cExpDate{
+    position: relative;
+    top: -.5px;
     font-size: 15px;
     border-radius: 5px;
     width: 100%;
@@ -2672,7 +2799,7 @@ table{
     border-color: transparent;
 }
 
-#photoUpload{
+.photoUpload{
     opacity: 0.0;
 
    /* IE 8 */
@@ -2699,6 +2826,7 @@ table{
     flex-direction: column;
     gap: 40px;
     text-align: center;
+    padding-bottom: -100px;
 }
 .form-top-right .plus-icon{
     position: relative;   
@@ -2783,49 +2911,60 @@ table{
 .c-phone-number{
     width: 100%;
 }
+.c-created-date{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.c-user-type label{
+    align-self: flex-start;
+}
+.c-user-type{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
 .c-status{
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .c-remarks{
     width: 60%;
 }
 
-#cExistInsurer{
+.cExistInsurer{
     border-radius: 5px;
     width: 100%;
     height: 30px;
     border-color: transparent;
 }
-#cPPN{
+.cPPN{
     border-radius: 5px;
     width: 100%;
     height: 30px;
     border-color: transparent;
 }
-#cMakeModel{
+.cMakeModel{
     border-radius: 5px;
     width: 100%;
     height: 30px;
     border-color: transparent;
 }
-#cIDV{
+.cIDV{
     border-radius: 5px;
     width: 100%;
     height: 30px;
     border-color: transparent;
 }
-#cPhoneNo{
+.cPhoneNo{
     border-radius: 5px;
     width: 100%;
     height: 30px;
     border-color: transparent;
 }
-#cStatus{
-    /* border-radius: 5px;
-    width: 100%;
-    height: 30px;
-    border-color: transparent; */
+.cStatus{
     
     padding: 0px;
     padding-left: 5px;
@@ -2836,12 +2975,13 @@ table{
     border-color: transparent;
 
 }
-#cRemarks{
+.cRemarks{
     border-radius: 5px;
     width: 100%;
     min-height: 100px;
     max-height: 100px;
     border-color: transparent;
+    /* outline-color: cyan; */
 }
 /* laptop >> add user form pages<<*/
 @media only screen and (min-width:1224px){
@@ -2877,6 +3017,10 @@ table{
     .container .add-user-saveAsDraft-button .add-user-saveAsDraft-btn:hover{
         background-color: #00507a;
     }
+    /* gap between top row and bottom row in add user forms */
+    .add-user-container{
+        gap: 0px;
+    }
     .add-user-container label{
         font-size: 15px;
     }
@@ -2888,6 +3032,7 @@ table{
     .add-user-container input,
     .add-user-container .custom-select{
         height: 27px!important;
+        width: 100%;
     }
     .add-user-container .form-top-right{
         border-radius: 15px;
@@ -2916,5 +3061,154 @@ table{
         height: 2px;
         width: 25px;
         top: -7px;
+    }
+    .add-user-container .top3{
+        margin-top: 0px;
+    }
+    .add-user-container .botm1{
+        margin-top: 10px;
+    }
+    .add-user-container .c-status{
+        margin-top: 10px;
+    }
+    .add-user-container .c-status label{
+        align-self: flex-start;
+    }
+}
+@media only screen and (max-width:1224px){
+    /* back button */
+    .container .back-button .back-btn{
+        height: 35px;
+        padding: 0;
+        font-size: 15px;
+        padding: 0px 30px 0px
+    }
+    .container .back-button .back-btn:hover{
+        background-color: #00507a;
+    }
+    
+    /* save/reset/save as draft buttons */
+    .container .add-user-save-button,
+    .container .add-user-reset-button,
+    .container .add-user-saveAsDraft-button{
+        margin-top: 20px;  
+        margin-bottom: 30px;    
+    }
+    .container .add-user-save-button .add-user-save-btn,
+    .container .add-user-reset-button .add-user-reset-btn,
+    .container .add-user-saveAsDraft-button .add-user-saveAsDraft-btn{
+        height: 35px;
+        padding: 0;
+        font-size: 15px;
+        padding: 0px 30px 0px;
+          
+    }
+    .container .add-user-save-button .add-user-save-btn:hover,
+    .container .add-user-reset-button .add-user-reset-btn:hover,
+    .container .add-user-saveAsDraft-button .add-user-saveAsDraft-btn:hover{
+        background-color: #00507a;
+    }
+    /* gap between top row and bottom row in add user forms */
+    .add-user-container{
+        gap: 0px;
+    }
+    .add-user-container label{
+        font-size: 15px;
+    }
+    .add-user-container input,
+    .add-user-container textarea{
+        font-size: 15px;
+    }
+    /* change input field height */
+    .add-user-container input,
+    .add-user-container .custom-select{
+        height: 27px!important;
+        width: 100%;
+    }
+    .add-user-container .form-top-right{
+        border-radius: 15px;
+    }
+    .add-user-container .form-top-right .dashed-line{
+        height: 200px;
+        border-radius: 15px;
+    }
+    /* "upload Photo" text */
+    .add-user-container .form-top-right p{
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-bottom: 10px; */
+    }
+    /* main pic upload button */
+    .add-user-container .form-top-right .plus-bg{
+        width: 40px;
+        height: 40px;
+        top: 30%;
+    }
+    /* button lines */
+    .add-user-container .form-top-right .plus-icon .line1,
+    .add-user-container .form-top-right .plus-icon .line2{
+        height: 2px;
+        width: 25px;
+        top: -7px;
+    }
+    .add-user-container .top3{
+        margin-top: 0px;
+    }
+    .add-user-container .botm1{
+        margin-top: 10px;
+    }
+    .add-user-container .c-status{
+        margin-top: 10px;
+    }
+    .add-user-container .c-status label{
+        align-self: flex-start;
+    }
+
+}
+/* tablets */
+@media only screen and (max-width:768px){
+    .c-sum-insured, .c-health-policy-type{
+        width: 50%;
+    }
+    .c-total-premium, .c-expiry-date{
+        width: 50%;
+    }
+    .c-existing-insurer, .c-present-policy-num{
+        width: 50%;
+    }
+    .c-sub-container, .c-remarks{
+        width: 50%;
+    }
+}
+@media only screen and (max-width:321px){
+    .c-user-type, .c-created-date{
+        width: 100%;
+        margin-top: 5px;
+    }
+    .customer-name, .customer-id{
+        width: 100%;
+    }
+    .top3, .top4{
+        flex-direction: column;
+        gap: 0px!important;
+    }
+    .c-health-policy-type{
+        margin-top: 10px;
+    }
+    .c-expiry-date{
+        margin-top: 10px;
+    }
+    .c-sum-insured, .c-health-policy-type,
+    .c-total-premium, .c-expiry-date{
+        width: 100%;
+    }
+    .add-user-save-button, .add-user-reset-button{
+        margin-bottom: 0px!important;
+       
+    }
+    .add-user-saveAsDraft-button{
+        align-self: center;
     }
 }
