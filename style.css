@@ -1102,29 +1102,29 @@ nav ul ul li a .submenu-arrow-vehicle.rotate,
 .row{
     margin: auto;
     align-content: stretch;
-    padding-top: 20px;
+    /* padding-top: 20px; */
     padding-left: 10px;
     column-gap: 25px;
 }
-.col-sm{
-    padding-top: 10px;
-    padding-bottom: 10px;
+.row .new-leads, .row .policy-renewals,
+.row .total-customers{
+    border-radius: 10px;
     text-align: center;
-    width: fit-content;
-    
-    height: fit-content;
-    border-radius: 30px;
-    margin-right: 75px;
-    margin-bottom: 20px;
     box-shadow: 4px 3px 12px rgba(0,0,0,20%);
 }
-.newleads{
+.row span{
+    font-size: 30px;
+}
+.row h5{
+    font-size: 15px;
+}
+.row .new-leads{
     background-color: #57BF5B;
 }
-.policy-renewals{
+.row .policy-renewals{
     background-color: #57BF5B;
 }
-.total-customers{
+.row .total-customers{
     background-color: #62BBED;
 }
 h5{
@@ -1899,10 +1899,11 @@ table{
     .reports .custom-select-filter{
         height: 35px;
     }
+    /* dashboard section also included below as row */
+
     .row{
         padding-left: 0px;
         width: 100%;
-        
     }
     .graph-row1{
         margin-left: 0px;
@@ -2186,7 +2187,7 @@ table{
 .profile-container{
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
+    margin-top: 60px;
     box-shadow: 7px 10px 10px -10px;
     border-radius: 10px;
     padding: 20px;
@@ -2327,6 +2328,10 @@ table{
         background-image: radial-gradient();
         width: 1px;
     }
+    #newPassword, #confirmPassword, #currentPassword{
+        height: 27px;
+    }
+
 }
 @media only screen and (max-width:1224px){
     .page-content-wrapper .container h1{
