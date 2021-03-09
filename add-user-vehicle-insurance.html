@@ -182,12 +182,22 @@
                         </div>
                         <div class="botm3">
                             <div class="c-sub-container">
-                                <div class="c-phone-number">
+                                <form class="form-inline c-policy-type">
+                                    <label class="my-1 mr-2 " for="cPolicyType">Policy Type</label>
+                                    <select class="custom-select my-1 mr-sm-2 " id="cPolicyType">
+                                      <option selected>Select a type</option>
+                                      <option value="1">Type 1</option>
+                                      <option value="2">Type 2</option>
+                                      <option value="3">Type 3</option>
+                                    </select>
+                                </form>
+                                <div class="c-phone-number vehicle">
                                     <form >
                                         <label for="cPhoneNo">Phone Number:</label>
                                         <input type="text" class="cPhoneNo" name="cPhoneNo">
                                     </form>
                                 </div>
+
                                 <form class="form-inline c-status">
                                     <label class="my-1 mr-2 " for="cStatus">Status</label>
                                     <select class="custom-select my-1 mr-sm-2 cStatus">
@@ -199,7 +209,7 @@
                             </div>
                             <div class="c-remarks form-group">
                                 <label for="cRemarks">Remarks</label>
-                                <textarea class="form-control cRemarks" rows="5" placeholder="Type your remarks here..."></textarea>
+                                <textarea class="form-control cRemarks vehicle" rows="5" placeholder="Type your remarks here..."></textarea>
                             </div>
                         </div>
                     </div>

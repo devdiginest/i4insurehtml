@@ -975,15 +975,16 @@ nav ul ul li a .submenu-arrow-vehicle.rotate,
         order: 2;
         width: 100%!important;
     }
-    /* lll */
+    
     .form-bottom .top3 .c-health-policy-type,
     .c-fire-policy-type, .c-user-type,
     .c-created-date, .customer-name, .customer-id,
-    .c-sum-insured, .c-expiry-date{
+    .c-sum-insured, .c-expiry-date, .c-follow-up-date{
         width: 50%!important;
     }
     .form-bottom .top3 .c-vehicle-class,
-    .c-vehicle-no, .c-vehicle-type, .c-fire-risk-class {
+    .c-vehicle-no, .c-vehicle-type, .c-fire-risk-class,
+    .c-enquiry-type {
    
         width: 50%!important;
     }
@@ -1021,11 +1022,12 @@ nav ul ul li a .submenu-arrow-vehicle.rotate,
     .form-bottom .top3 .c-health-policy-type,
     .c-fire-policy-type, .c-user-type,
     .c-created-date, .customer-name, .customer-id,
-    .c-sum-insured, .c-expiry-date, .c-total-premium{
+    .c-sum-insured, .c-expiry-date, .c-total-premium,
+    .c-follow-up-date{
         width: 100%!important;
     }
     .form-bottom .top3 .c-vehicle-class,
-    .c-vehicle-no, .c-vehicle-type {
+    .c-vehicle-no, .c-vehicle-type, .c-enquiry-type {
    
         width: 100%!important;
     }
@@ -1037,7 +1039,7 @@ nav ul ul li a .submenu-arrow-vehicle.rotate,
     .form-bottom .top4 .c-fire-risk-class{
         width: 100%!important;
     }
-    .form-bottom .top4 .c-vehicle-type{
+    .form-bottom .top4 .c-vehicle-type, .c-enquiry-type{
         width: 100%!important;
     }
     
@@ -1079,6 +1081,10 @@ nav ul ul li a .submenu-arrow-vehicle.rotate,
         height: 35px!important;
         align-content: center;
         
+    }
+    .cRemarks.vehicle{
+        max-height: 100px!important;
+        min-height: 100px!important;
     }
 }
 
@@ -2656,7 +2662,9 @@ table{
     width: 100%;
     
 }
-
+.form-top-left.my-tasks{
+    width: 100%!important;
+}
 .add-user-container .form-top-left{
     width: 80%;
 }
@@ -2722,6 +2730,10 @@ table{
     /* flex-grow: 1; */
     width: 40%;
 }
+.c-enquiry-type{
+    /* flex-grow: 1; */
+    width: 80%;
+}
 .c-vehicle-type{
     /* flex-grow: 1; */
     width: 80%;
@@ -2730,7 +2742,10 @@ table{
     /* flex-grow: 1; */
     width: 60%;
 }
-.c-expiry-date{
+.c-follow-up-date{
+    width: 50%;
+}
+.c-expiry-date {
     /* flex-grow: 1; */
     width: 60%;
 }
@@ -2814,6 +2829,9 @@ table{
 .c-fire-risk-class{
     width: 40%;
 }
+.c-enquiry-type{
+    width: 50%;
+}
 .c-vehicle-type{
     width: 40%;
 }
@@ -2835,7 +2853,7 @@ table{
     height: 30px;
     border-color: transparent;
 }
-#cVehicleType{
+#cVehicleType, #cEnquiryType{
     border-radius: 5px;
     width: 100%;
     height: 30px;
@@ -2848,7 +2866,7 @@ table{
     height: 30px;
     border-color: transparent;
 }
-.cExpDate{
+.cExpDate, #cFollowUpDate{
     position: relative;
     top: -.5px;
     font-size: 15px;
@@ -2964,8 +2982,21 @@ table{
 .c-insured-declared-value{
     width: 60%;
 }
+.c-sub-container.my-tasks{
+    width: 50%;
+}
 .c-sub-container {
     width: 40%;
+}
+.c-policy-type.my-tasks{
+    margin-top: 10px;
+}
+.c-policy-type{
+    width: 100%;
+}
+.c-phone-number.vehicle{
+    margin-top: 10px!important;
+    width: 100%;
 }
 .c-phone-number{
     width: 100%;
@@ -2988,7 +3019,9 @@ table{
     display: flex;
     flex-direction: column;
 }
-
+.c-remarks.my-tasks{
+    width: 50%;
+}
 .c-remarks{
     width: 60%;
 }
@@ -3017,6 +3050,13 @@ table{
     height: 30px;
     border-color: transparent;
 }
+#cPolicyType{
+    position: relative;
+    top: 6px;
+    width: 100%;
+    margin: 0px!important;
+    padding: 0px!important;
+}
 .cPhoneNo{
     border-radius: 5px;
     width: 100%;
@@ -3033,6 +3073,18 @@ table{
     height: 30px;
     border-color: transparent;
 
+}
+.cRemarks.my-tasks{
+    min-height: 105px;
+    max-height: 105px;
+}
+.cRemarks.vehicle{
+    border-radius: 5px;
+    width: 100%;
+    min-height: 165px;
+    max-height: 165px;
+    border-color: transparent;
+    /* outline-color: cyan; */
 }
 .cRemarks{
     border-radius: 5px;
@@ -3236,7 +3288,7 @@ table{
     .c-fire-policy-type{
         width: 50%;
     }
-    .c-total-premium, .c-expiry-date{
+    .c-total-premium, .c-expiry-date, .c-follow-up-date{
         width: 50%;
     }
     .c-existing-insurer, .c-present-policy-num{
@@ -3267,12 +3319,12 @@ table{
     .c-health-policy-type, .c-fire-policy-type{
         margin-top: 10px;
     }
-    .c-expiry-date{
+    .c-expiry-date, .c-follow-up-date{
         margin-top: 10px;
     }
     .c-sum-insured, .c-health-policy-type,
     .c-total-premium, .c-expiry-date, .c-fire-policy-type,
-    .c-fire-risk-class{
+    .c-fire-risk-class, .c-follow-up-date{
         width: 100%;
     }
     .add-user-save-button, .add-user-reset-button{
