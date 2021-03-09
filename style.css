@@ -995,28 +995,30 @@ nav ul ul li a .submenu-arrow-vehicle.rotate,
         flex-direction: column;
         gap: 10px!important;
     }
-    .form-top .top3{
+    .form-bottom .top3{
         flex-direction: column;
         gap: 10px!important;
 
     }
-    .form-top .top3 .c-health-policy-type,
-    .c-fire-policy-type{
+    .form-bottom .top3 .c-health-policy-type,
+    .c-fire-policy-type, .c-user-type,
+    .c-created-date, .customer-name, .customer-id,
+    .c-sum-insured, .c-expiry-date{
         width: 100%!important;
     }
-    .form-top .top3 .c-vehicle-class {
+    .form-bottom .top3 .c-vehicle-class {
    
         width: 100%!important;
     }
-    .form-top .top4{
+    .form-bottom .top4{
         flex-direction: column;
         gap: 10px!important;
 
     }
-    .form-top .top4 .c-fire-risk-class{
+    .form-bottom .top4 .c-fire-risk-class{
         width: 100%!important;
     }
-    .form-top .top4 .c-vehicle-type{
+    .form-bottom .top4 .c-vehicle-type{
         width: 100%!important;
     }
     
@@ -1050,10 +1052,14 @@ nav ul ul li a .submenu-arrow-vehicle.rotate,
     .form-bottom .botm3 .c-remarks{
         width: 100%!important;
     }
+    .add-user-save-button , .add-user-reset-button{
+        margin-bottom: 0px;
+    }
     .add-user-save-btn , .add-user-reset-btn, .add-user-saveAsDraft-btn{
         font-size: 17px!important;
-        height: 40px!important;
+        height: 35px!important;
         align-content: center;
+        
     }
 }
 
@@ -3119,9 +3125,12 @@ table{
     }
     
     /* save/reset/save as draft buttons */
-    .container .add-user-save-button,
-    .container .add-user-reset-button,
     .container .add-user-saveAsDraft-button{
+        margin-bottom: 10px;
+    }
+    .container .add-user-save-button,
+    .container .add-user-reset-button {
+   
         margin-top: 20px;  
         margin-bottom: 30px;    
     }
@@ -3130,7 +3139,7 @@ table{
     .container .add-user-saveAsDraft-button .add-user-saveAsDraft-btn{
         height: 35px;
         padding: 0;
-        font-size: 15px;
+        font-size: 15px!important;
         padding: 0px 30px 0px;
           
     }
@@ -3213,39 +3222,14 @@ table{
     .c-sub-container, .c-remarks{
         width: 50%;
     }
+    /* .container .add-user-save-button .add-user-save-btn,
+    .container .add-user-reset-button .add-user-reset-btn,
+    .container .add-user-saveAsDraft-button .add-user-saveAsDraft-btn{
+        height: 25px!important;
+        font-size: 14px!important;
+    } */
 }
 @media only screen and (max-width:321px){
-    .c-user-type, .c-created-date{
-        width: 100%;
-        margin-top: 5px;
-    }
-    .customer-name, .customer-id{
-        width: 100%;
-    }
-    .top3, .top4{
-        flex-direction: column;
-        gap: 0px!important;
-    }
-    .c-health-policy-type, .c-fire-policy-type{
-        margin-top: 10px;
-    }
-    .c-expiry-date{
-        margin-top: 10px;
-    }
-    .c-sum-insured, .c-health-policy-type,
-    .c-total-premium, .c-expiry-date, .c-fire-policy-type,
-    .c-fire-risk-class{
-        width: 100%;
-    }
-    .add-user-save-button, .add-user-reset-button{
-        margin-bottom: 0px!important;
-       
-    }
-    .add-user-saveAsDraft-button{
-        align-self: center;
-    }
-}
-@media only screen and (min-width:321px){
     .c-user-type, .c-created-date{
         width: 100%;
         margin-top: 5px;
