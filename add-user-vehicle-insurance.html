@@ -58,18 +58,32 @@
                 <div class="add-user-container">
                     <div class="form-top">
                         <div class="form-top-left">
+                            <div class="top0">
+                                <form class="form-inline c-user-type">
+                                    <label class="my-1 mr-2 user-type-label" for="cUserType">User type:</label>
+                                    <select class="cUserType custom-select my-1 mr-sm-2 ">
+                                      <option selected>Select user</option>
+                                      <option value="1">Customer</option>
+                                      <option value="2">Lead</option>
+                                    </select>
+                                </form>
+                                <form class="c-created-date">
+                                    <label for="cCreatedDate">Created Date:</label>
+                                    <input type="date" class="cCreatedDate" name="cCreatedDate">
+                                </form>
+                            </div>
                             <div class="top1">
                                 <div class="customer-name">
                                     <form>
                                         <label for="cName">Customer Name:</label>
-                                        <input type="text" id="cName" name="cName">
+                                        <input type="text" class="cName" name="cName">
                                     </form>
                                     
                                 </div>
                                 <div class="customer-id">
                                     <form>
                                         <label for="cID">Customer ID:</label>
-                                        <input type="text" id="cID" name="cID">
+                                        <input type="text" class="cID" name="cID">
                                     </form>
                                 </div>
                             </div>
@@ -77,26 +91,40 @@
                                 <div class="c-address">
                                     <form>
                                         <label for="cAddress">Address:</label>
-                                        <textarea id = "cAddress"></textarea>
+                                        <textarea class = "cAddress"></textarea>
                                     </form>
                                 </div>
                             </div>
-                            <div class="top3">
-                                <div class="c-vehicle-no">
-                                    <form>
-                                        <label for="cVehicleNo">Vehicle Number:</label>
-                                        <input type="text" id="cVehicleNo" name="cVehicleNo">
-                                    </form>
+                            
+                        </div>
+                        <div class="form-top-right">
+                            <div class="dashed-line">
+                                
+                                <div class="plus-bg">
+                                    <div class="plus-icon"><div class="line1"></div><div class="line2"></div></div>
                                 </div>
-                                <!-- <div class="c-vehicle-class">
-                                    <form>
-                                        <label for="cVehicleCls">Vehicle Class:</label>
-                                        <input type="text" id="cVehicleCls" name="cVehicleCls">
-                                    </form>
-                                </div> -->
-                                <form class="form-inline c-vehicle-class">
-                                    <label class="my-1 mr-2 " for="cVehicleCls">Vehicle Class</label>
-                                    <select class="custom-select my-1 mr-sm-2 " id="cVehicleCls">
+                                <input type="file" class="photoUpload" />
+                            </div>
+                            <p style="color: #002438; font-weight: 500;">Upload Photo</p>
+                        </div>
+                    </div>
+                    <div class="form-bottom">
+                        <div class="top3">
+                            <div class="c-vehicle-no">
+                                <form>
+                                    <label for="cVehicleNo">Vehicle Number:</label>
+                                    <input type="text" id="cVehicleNo" name="cVehicleNo">
+                                </form>
+                            </div>
+                            <!-- <div class="c-vehicle-class">
+                                <form>
+                                    <label for="cVehicleCls">Vehicle Class:</label>
+                                    <input type="text" id="cVehicleCls" name="cVehicleCls">
+                                </form>
+                            </div> -->
+                            <form class="form-inline c-vehicle-class">
+                                <label class="my-1 mr-2 " for="cVehicleCls">Vehicle Class</label>
+                                <select class="custom-select my-1 mr-sm-2 " id="cVehicleCls">
                                     <option selected>Select a class</option>
                                     <option value="1">Private Car</option>
                                     <option value="2">Two Wheeler</option>
@@ -106,48 +134,35 @@
                                     <option value="6">JCB/Tractor/Crane</option>
                                     <option value="7">School Bus</option>
                                     <option value="8">Taxi Cab</option>
-                                    </select>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="top4">
+                            <div class="c-vehicle-type">
+                                <form>
+                                    <label for="cVehicleType">Type of vehicle:</label>
+                                    <input type="text" id="cVehicleType" name="cVehicleTyp">
                                 </form>
                             </div>
-                            <div class="top4">
-                                <div class="c-vehicle-type">
-                                    <form>
-                                        <label for="cVehicleTyp">Type of vehicle:</label>
-                                        <input type="text" id="cVehicleTyp" name="cVehicleTyp">
-                                    </form>
-                                </div>
-                                
-                                <div class="c-expiry-date">
-                                    <form>
-                                        <label for="cExpDate">Expiry Date:</label>
-                                        <input type="date" id="cExpDate" name="cExpDate">
-                                    </form>
-                                </div>
+                            
+                            <div class="c-expiry-date">
+                                <form>
+                                    <label for="cExpDate">Expiry Date:</label>
+                                    <input type="date" class="cExpDate" name="cExpDate">
+                                </form>
                             </div>
                         </div>
-                        <div class="form-top-right">
-                            <div class="dashed-line">
-                                
-                                <div class="plus-bg">
-                                    <div class="plus-icon"><div class="line1"></div><div class="line2"></div></div>
-                                </div>
-                                <input type="file" id="photoUpload" />
-                            </div>
-                            <p style="color: #002438; font-weight: 500;">Upload Photo</p>
-                        </div>
-                    </div>
-                    <div class="form-bottom">
                         <div class="botm1">
                             <div class="c-existing-insurer">
                                 <form>
                                     <label for="cExistInsurer">Existing Insurer:</label>
-                                    <input type="text" id="cExistInsurer" name="cExistInsurer">
+                                    <input type="text" class="cExistInsurer" name="cExistInsurer">
                                 </form>
                             </div>
                             <div class="c-present-policy-num">
                                 <form>
                                     <label for="cPPN">Present Policy Number:</label>
-                                    <input type="text" id="cPPN" name="cPPN">
+                                    <input type="text" class="cPPN" name="cPPN">
                                 </form>
                             </div>
                         </div>
@@ -155,13 +170,13 @@
                             <div class="c-make-and-model">
                                 <form>
                                     <label for="cMakeModel">Make and Model:</label>
-                                    <input type="text" id="cMakeModel" name="cMakeModel">
+                                    <input type="text" class="cMakeModel" name="cMakeModel">
                                 </form>
                             </div>
                             <div class="c-insured-declared-value">
                                 <form>
                                     <label for="cIDV">Insured Declared value:</label>
-                                    <input type="text" id="cIDV" name="cIDV">
+                                    <input type="text" class="cIDV" name="cIDV">
                                 </form>
                             </div>
                         </div>
@@ -170,12 +185,12 @@
                                 <div class="c-phone-number">
                                     <form >
                                         <label for="cPhoneNo">Phone Number:</label>
-                                        <input type="text" id="cPhoneNo" name="cPhoneNo">
+                                        <input type="text" class="cPhoneNo" name="cPhoneNo">
                                     </form>
                                 </div>
                                 <form class="form-inline c-status">
                                     <label class="my-1 mr-2 " for="cStatus">Status</label>
-                                    <select class="custom-select my-1 mr-sm-2 " id="cStatus">
+                                    <select class="custom-select my-1 mr-sm-2 cStatus">
                                     <option selected>Select status</option>
                                     <option value="1">Expired</option>
                                     <option value="2">Renewed</option>
@@ -184,7 +199,7 @@
                             </div>
                             <div class="c-remarks form-group">
                                 <label for="cRemarks">Remarks</label>
-                                <textarea class="form-control" id="cRemarks" rows="5" placeholder="Type your remarks here..."></textarea>
+                                <textarea class="form-control cRemarks" rows="5" placeholder="Type your remarks here..."></textarea>
                             </div>
                         </div>
                     </div>

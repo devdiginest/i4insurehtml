@@ -956,7 +956,7 @@ nav ul ul li a .submenu-arrow-vehicle.rotate,
     }
 }
 /* <<<<<<<<<<<<<<add-user-form: tablet and mobile responsive settings below>>>>>>> */
-@media only screen and (max-width:768px){
+@media only screen and (max-width:769px){
     .container{
         padding-right: 20px!important;
     }
@@ -974,6 +974,24 @@ nav ul ul li a .submenu-arrow-vehicle.rotate,
     .form-top .form-top-left{
         order: 2;
         width: 100%!important;
+    }
+    /* lll */
+    .form-bottom .top3 .c-health-policy-type,
+    .c-fire-policy-type, .c-user-type,
+    .c-created-date, .customer-name, .customer-id,
+    .c-sum-insured, .c-expiry-date{
+        width: 50%!important;
+    }
+    .form-bottom .top3 .c-vehicle-class,
+    .c-vehicle-no, .c-vehicle-type, .c-fire-risk-class {
+   
+        width: 50%!important;
+    }
+    .form-bottom .botm2 .c-make-and-model{
+        width: 50%!important;
+    }
+    .form-bottom .botm2 .c-insured-declared-value{
+        width: 50%!important;
     }
 }
 @media screen and (max-width:426px ){
@@ -1003,10 +1021,11 @@ nav ul ul li a .submenu-arrow-vehicle.rotate,
     .form-bottom .top3 .c-health-policy-type,
     .c-fire-policy-type, .c-user-type,
     .c-created-date, .customer-name, .customer-id,
-    .c-sum-insured, .c-expiry-date{
+    .c-sum-insured, .c-expiry-date, .c-total-premium{
         width: 100%!important;
     }
-    .form-bottom .top3 .c-vehicle-class {
+    .form-bottom .top3 .c-vehicle-class,
+    .c-vehicle-no, .c-vehicle-type {
    
         width: 100%!important;
     }
@@ -1053,7 +1072,7 @@ nav ul ul li a .submenu-arrow-vehicle.rotate,
         width: 100%!important;
     }
     .add-user-save-button , .add-user-reset-button{
-        margin-bottom: 0px;
+        margin-bottom: 0px!important;
     }
     .add-user-save-btn , .add-user-reset-btn, .add-user-saveAsDraft-btn{
         font-size: 17px!important;
@@ -2707,6 +2726,10 @@ table{
     /* flex-grow: 1; */
     width: 80%;
 }
+.c-vehicle-class{
+    /* flex-grow: 1; */
+    width: 60%;
+}
 .c-expiry-date{
     /* flex-grow: 1; */
     width: 60%;
@@ -2764,7 +2787,7 @@ table{
 .add-user-container select option{
     font-size: 15px;
 }
-#cHealthPolicyType, #cFirePolicyType{
+#cHealthPolicyType, #cFirePolicyType, #cVehicleCls{
     font-size: 15px;
     position: relative;
     top: 2px;
