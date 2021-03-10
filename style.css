@@ -1106,23 +1106,26 @@ nav ul ul li a .submenu-arrow-vehicle.rotate,
     padding-left: 10px;
     column-gap: 25px;
 }
+
 .row .new-leads, .row .policy-renewals,
 .row .total-customers{
     border-radius: 10px;
     text-align: center;
     box-shadow: 4px 3px 12px rgba(0,0,0,20%);
 }
-.row span{
-    font-size: 30px;
+/* arrow icon */
+.row .new-leads i, .row .policy-renewals i,
+.row .total-customers i{
+    font-size: 25px;
 }
 .row h5{
     font-size: 15px;
 }
 .row .new-leads{
-    background-color: #57BF5B;
+    background-color: #62BBED;
 }
 .row .policy-renewals{
-    background-color: #57BF5B;
+    background-color: #bf6f57;
 }
 .row .total-customers{
     background-color: #62BBED;
