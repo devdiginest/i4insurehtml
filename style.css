@@ -1099,6 +1099,11 @@ nav ul ul li a .submenu-arrow-vehicle.rotate,
     padding-right: 50px;
     margin-left: -10px;
 }
+
+
+/* /////////////dashboard settings in here///////////// */
+
+
 .row{
     margin: auto;
     align-content: stretch;
@@ -1139,6 +1144,93 @@ h5{
     font-weight: bolder;
     color: white;
 }
+/* calender area styled for convenience */
+.container.dashboard .calender{
+    width: 100%;
+    height: 75vh;
+    background-color: #002438;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ---
+trial button to check renewals.
+may remove this button after calender is added.
+May also add ".renewal-calender" class to all columns in
+the calender after removing the styles
+--- */
+.container.dashboard .calender .events-calender{
+    height: 30px;
+    padding:  0px 10px 0px 10px;
+    background-color: royalblue;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    outline: none;
+}
+/* renewal popup window setting */
+
+.calender .event-popup{
+    display: none;
+    position: fixed;
+    width: 40%;
+    height: fit-content;
+    background-color: white;
+    border-radius: 10px;
+    padding: 0px 10px 10px 10px;
+    z-index: 10;
+}
+.calender .event-popup-contents{
+    display: flex;
+    flex-direction: column;
+}
+.calender .event-popup-contents .exit-button{
+    align-self: flex-end;
+    font-size: 30px;
+    top: 0px;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    color: #002438;
+    transition: .3s;
+}
+
+.calender .event-popup-contents .exit-button:hover{
+    color:blueviolet;
+}
+.calender .event-popup-contents .number-of-events{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}    
+.calender .number-of-events .renewals,
+.calender .number-of-events .expiry{
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    align-items: center;
+    text-align: left;
+    height: 70px;
+    border-radius: 10px;
+    background-color: blueviolet;
+    color: white;
+} 
+.calender .number-of-events a{
+    text-decoration: none;
+}
+
+.calender .number-of-events .renewals span,
+.calender .number-of-events .expiry span{
+    right: 0px;
+}
+/* -------------------------------- */
 h1{
     text-align: center;
     padding-top: 50px;
