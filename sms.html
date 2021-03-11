@@ -64,20 +64,29 @@
                     </div>
                 </div>
                 <div class="underline2"></div>
-                <div class="sms-form form-group">
-                    <label for="notifyMessageForm"></label>
-                    <textarea class="form-control" id="notifyMessageForm" rows="5" placeholder="Type your message here..."></textarea>
-                </div>
                 <div class="notify-expire">
-                    <p>Notify when a customer renews policy</p>
+                    <p>Notify when a policy expires.</p>
                     <div class="switch-expire custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="customSwitch2" >
                         <label class="custom-control-label" for="customSwitch2"></label>
                     </div>
                 </div>
                 <div class="underline2"></div>
+                <h4>CUSTOM MESSAGE</h4>
+                <div class="sms-form form-group">
+                    <label for="notifyMessageForm"></label>
+                    <div class="sms-templates">
+                        <button class="template1">Template 1</button>
+                        <button class="template2">Template 2</button>
+                        <button class="template3">Template 3</button>
+                    </div>
+                    <textarea class="form-control" id="notifyMessageForm" rows="5" placeholder="Type your message here..."></textarea>
+                </div>
+                
             </div>
-            
+            <div class="add-user-save-button">
+                <button type="button" class="add-user-save-btn btn btn-primary">SAVE</button>
+            </div>
             
         </div>
     </div>
@@ -89,6 +98,22 @@
         $('.user-btn').click(function(){
             $('nav ul .user-submenus').toggleClass("show-user-sub-menu");
             $('nav ul .user-arrow-icon').toggleClass("rotate");
+        });
+        // sms templates 
+        var templates = [
+            "Hi username-1, \nYour Policy has expired, kindly renew it as soon as possible",
+            "Hi username-2, \nYour Policy has expired, kindly renew it as soon as possible",
+            "Hi username-3, \nYour Policy has expired, kindly renew it as soon as possible"
+        ]
+        // template button functions
+        $('.template1').click(function(){
+            $('#notifyMessageForm').val(templates[0]);
+        });
+        $('.template2').click(function(){
+            $('#notifyMessageForm').val(templates[1]);
+        });
+        $('.template3').click(function(){
+            $('#notifyMessageForm').val(templates[2]);
         });
     </script>
 </body>
