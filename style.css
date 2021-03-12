@@ -2126,6 +2126,10 @@ table{
         padding-left: 0px;
         width: 100%;
     }
+    /* dashboard event */
+    .customer.event{
+        margin-top: 60px;
+    } 
     /* ---------- */
     .graph-row1{
         margin-left: 0px;
@@ -2380,6 +2384,13 @@ table{
     color: #ffffff;
     
 }
+.sms-container .sms-form .sms-templates .template1:active,
+.sms-container .sms-form .sms-templates .template2:active,
+.sms-container .sms-form .sms-templates .template3:active{
+    background-color: #ffffff;
+    color: #002438;
+}
+
 #notifyMessageForm{
     min-height: 130px;
     max-height: 130px;
