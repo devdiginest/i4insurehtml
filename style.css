@@ -903,8 +903,60 @@ nav ul ul li a .submenu-arrow-vehicle.rotate,
     /* #sidebarDesign{
         display: none;
     } */
+    /* sidebar setup for smaller screens */
+    .sidebar header{
+        
+        font-size: 40px;
+        margin-top: -20%;
+        padding-bottom: 10px;
+        border-bottom-left-radius: 200px;
+        border-bottom-right-radius: 200px;
+        
+    }
+    .sidebar header span{
+        position: relative;
+        font-size: 20px;
+        font-weight: 400;
+        top: -10px;
+    }
+    .sidebar{
+        /* top: 0px; added during new hamburger
+        to stop from showing top gap*/
+        width: 220px;
+    }
+    .sidebar ul{
+        margin-top: 30px;
+    }
+    nav ul li a{
+        font-size: 15px;
+        padding-left: 70px;
+        font-weight: 500;
+    }
+    /* sidebar submenu font settings */
+    nav ul ul li a{
+        font-size: 13px;
+        /* font-weight: 400; */
+    }
+    nav ul li{
+        line-height: 20px;
+    }
+    /*sidebar submenu line height  */
+    nav ul ul li{
+        line-height: 5px;
+    }
+    nav ul li a span{
+        font-size: 15px;
+    }
+    nav ul li.active > a{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        
+    }
+    
+    
+    /* ------- */
     #check:checked ~ label #hamburger-bars, #check:checked ~ label #hamburger-cancel{
-        left: 290px;
+        left: 230px;
     }
     .hamburger{
         left: 10px;
@@ -917,7 +969,7 @@ nav ul ul li a .submenu-arrow-vehicle.rotate,
 }
 @media only screen and (max-width:425px){
     .sidebar{
-        width: 260px;
+        width: 250px;
     }
     #check:checked ~ label #hamburger-bars, #check:checked ~ label #hamburger-cancel{
         left: 270px;
@@ -1680,7 +1732,74 @@ table{
 .container.reports h1{
     margin-bottom: 30px;
 }
+/* custom report page */
+.custom-report .report-filter-row{
+    display: flex;
+    
+    width: 100%;
+    gap: 10px;
+    margin-top: 50px;
+    align-content: flex-start;
+    margin-bottom: 10px;
 
+}
+.custom-report .report-filter-row div{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-top: 50px;
+    align-content: flex-start;
+    margin-bottom: 10px;
+}
+.custom-report .report-filter-row .report-filter{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.custom-report .report-filter-row label{
+    align-self: flex-start;
+}
+.custom-report .report-filter-row .custom-select-filter{
+    border-radius: 20px;
+    width: 100%;
+}
+.custom-report .custom-select-filter{
+    outline: none;
+    width: 100%;
+    border-radius: 20px;
+    padding-left: 5px;
+    /* background-color: #53b9f0; */
+    /* color: white; */
+    border-color: #002438;
+    margin-right: 60px;
+}
+.custom-report .custom-select-filter:hover{
+    border-color: #25b3ff2f;
+    background-color: #25b3ff2f;
+}
+/* datepicker separate adjustment */
+.custom-report .custom-select-filter.date{
+    border-width: 1px;
+    width: 100%;
+    position: relative;
+    top: 4px;
+    margin-right: 0px;
+}
+/* submit button */
+.custom-report .custom-select-filter.submit{
+    border-width: 1px;
+    width: 100%;
+    position: relative;
+    background-color: #002438;
+    color: white;
+    top: 35px;
+    transition: background .3s;
+}
+.custom-report .custom-select-filter.submit:hover{
+    background-color: #05699e;
+}
+/* ------------------ */
 .reports .report-filter-row{
     display: flex;
     
@@ -1988,8 +2107,15 @@ table{
 
 
 @media only screen and (min-width:1224px){
+
     .reports .report-filter-row{
         margin-top: -30px;
+    }
+    .custom-report .report-filter-row{
+        margin-top: -30px;
+    }
+    .custom-report .custom-select-filter{
+        height: 35px;
     }
     .reports .custom-select-filter{
         height: 35px;
@@ -2000,6 +2126,7 @@ table{
         padding-left: 0px;
         width: 100%;
     }
+    /* ---------- */
     .graph-row1{
         margin-left: 0px;
         margin-right: 0px;

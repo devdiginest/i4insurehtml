@@ -206,7 +206,10 @@
         $('nav ul .user-submenus').toggleClass("show-user-sub-menu");
         $('nav ul .user-arrow-icon').toggleClass("rotate");
     });
-
+    // reset button function
+    $('.add-user-reset-button').click(function(){
+        $('input[type="text"],input[type="file"], input[type="date"], textarea, select').val("");
+    });
 </script>     
     
 </body>
